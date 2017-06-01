@@ -8,4 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString * const kAPI_KEY = API_KEY;
 static NSString * const kBASE_URL = BASE_URL;

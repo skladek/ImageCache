@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    let imagesController = ImagesController()
+
     let stringArray = ["Row", "Row", "Row", "Row", "Row", "Row", "Row", "Row", "Row", "Row", "Row", "Row"]
 
     @IBOutlet weak var tableView: UITableView!
@@ -34,5 +36,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+
+        imagesController.searchImagesFor(searchBar.text ?? "")
     }
 }

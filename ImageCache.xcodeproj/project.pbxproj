@@ -20,6 +20,8 @@
 		14D90F421EDF54E7002D0ABA /* URLConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F3C1EDF54E7002D0ABA /* URLConstructor.swift */; };
 		14D90F431EDF54E7002D0ABA /* WebServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F3D1EDF54E7002D0ABA /* WebServiceController.swift */; };
 		14D90F441EDF54E7002D0ABA /* WebServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F3E1EDF54E7002D0ABA /* WebServiceError.swift */; };
+		14D90F4C1EE0791D002D0ABA /* FlickrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F4B1EE0791D002D0ABA /* FlickrController.swift */; };
+		14D90F4E1EE07981002D0ABA /* ImagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F4D1EE07981002D0ABA /* ImagesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		14D90F3D1EDF54E7002D0ABA /* WebServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceController.swift; sourceTree = "<group>"; };
 		14D90F3E1EDF54E7002D0ABA /* WebServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceError.swift; sourceTree = "<group>"; };
 		14D90F451EDF55EA002D0ABA /* ImageCacheBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCacheBridgingHeader.h; sourceTree = "<group>"; };
+		14D90F4B1EE0791D002D0ABA /* FlickrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrController.swift; sourceTree = "<group>"; };
+		14D90F4D1EE07981002D0ABA /* ImagesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			children = (
 				14D90F291EDF547F002D0ABA /* Application */,
 				14D90F381EDF54E7002D0ABA /* Controllers */,
+				14D90F4A1EE0791D002D0ABA /* Network */,
 				14D90F2F1EDF547F002D0ABA /* ViewControllers */,
 			);
 			path = ImageCache;
@@ -139,6 +144,15 @@
 				14D90F3E1EDF54E7002D0ABA /* WebServiceError.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		14D90F4A1EE0791D002D0ABA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				14D90F4B1EE0791D002D0ABA /* FlickrController.swift */,
+				14D90F4D1EE07981002D0ABA /* ImagesController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +268,9 @@
 				14D90F411EDF54E7002D0ABA /* TableViewDataSource.swift in Sources */,
 				14D90F301EDF547F002D0ABA /* AppDelegate.swift in Sources */,
 				14D90F3F1EDF54E7002D0ABA /* JSONHandler.swift in Sources */,
+				14D90F4C1EE0791D002D0ABA /* FlickrController.swift in Sources */,
 				14D90F361EDF548D002D0ABA /* HomeViewController.swift in Sources */,
+				14D90F4E1EE07981002D0ABA /* ImagesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +308,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = "";
+				API_KEY = a3d2b3ea217dc4dce7beb8d800ec63bc;
+				BASE_URL = "https://api.flickr.com/services/rest/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -324,6 +341,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 					"BASE_URL=(@\\\"${BASE_URL}\\\")",
+					"API_KEY=(@\\\"${API_KEY}\\\")",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -345,7 +363,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = "";
+				API_KEY = a3d2b3ea217dc4dce7beb8d800ec63bc;
+				BASE_URL = "https://api.flickr.com/services/rest/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -371,7 +390,10 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "BASE_URL=(@\\\"${BASE_URL}\\\")";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"BASE_URL=(@\\\"${BASE_URL}\\\")",
+					"API_KEY=(@\\\"${API_KEY}\\\")",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
