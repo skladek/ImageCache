@@ -15,6 +15,7 @@ class ImagesController {
         }
 
         let parameters = [
+            "is_getty" : "1",
             "method" : "flickr.photos.search",
             "tags" : searchTerm
         ]

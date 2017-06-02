@@ -27,9 +27,7 @@ class ImageViewModel: NSObject {
             return
         }
 
-        imageDownloadTask = FlickrController.shared.getImage(url) { (image, response, error) in
-            completion(image, error)
-        }
+        imageDownloadTask = ImageCache.shared.getImage(url: url, completion: completion)
     }
 
     func title() -> String {

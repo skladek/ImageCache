@@ -19,5 +19,16 @@ class FlickrController: WebServiceController {
         ]
 
         super.init(baseURL: kBASE_URL, defaultParameters: defaultParameters)
+
+        ImageCache.shared.delegate = self
+    }
+}
+
+extension FlickrController: ImageCacheDelegate {
+    func loadImageAtURL(_ url: URL, completion: @escaping (UIImage?, Error?) -> ()) -> URLSessionDataTask? {
+        return getImage(url) { (image, response, error) in
+            ImageCache.shared.cacheImage(image, forURL: url)
+            completion(image, error)
+        }
     }
 }
