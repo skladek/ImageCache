@@ -44,6 +44,8 @@ extension HomeViewController: UISearchBarDelegate {
         imagesController.searchImagesFor(searchBar.text) { (images, error) in
             self.dataSource?.objects(images)
             self.tableView.reloadData()
+            let indexPath = IndexPath(row: 0, section: 0)
+            self.tableView.scrollToRow(at: indexPath, at: .none, animated: false)
         }
     }
 }
