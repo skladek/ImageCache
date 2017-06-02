@@ -54,4 +54,10 @@ class Image {
         self.server = server
         self.title = title
     }
+
+    func imageURL() -> URL? {
+        let urlString = "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_c.jpg"
+
+        return URL(string: urlString)
+    }
 }

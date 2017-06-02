@@ -21,10 +21,16 @@ class HomeViewController: UIViewController {
 
         let cellReuseId = "HomeViewControllerCellReuseId"
 
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseId)
+        let nib = UINib(nibName: "ImageCell", bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: cellReuseId)
 
         dataSource = TableViewDataSource<Image>(objects: [Image](), cellReuseId: cellReuseId, cellPresenter: { (cell, object) in
-            cell.textLabel?.text = object.title
+            guard let cell = cell as? ImageCell else {
+                return
+            }
+
+            let viewModel = ImageViewModel(image: object)
+            cell.setViewModel(viewModel)
         })
 
         tableView.dataSource = dataSource
