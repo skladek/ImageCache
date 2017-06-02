@@ -22,7 +22,7 @@ class ImageViewModel: NSObject {
         imageDownloadTask?.cancel()
     }
 
-    func image(completion: @escaping (UIImage?, Error?) -> ()) {
+    func image(completion: @escaping ImageCache.ImageCompletion) {
         guard let url = image.imageURL() else {
             return
         }

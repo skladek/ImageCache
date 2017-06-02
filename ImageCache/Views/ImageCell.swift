@@ -19,8 +19,13 @@ class ImageCell: UITableViewCell {
     func setViewModel(_ viewModel: ImageViewModel) {
         self.viewModel = viewModel
 
-        viewModel.image { (image, error) in
+        viewModel.image { (image, fromCache, error) in
+            let duration = fromCache ? 0.0 : 0.3
             self.cellImage.image = image
+
+            UIView.animate(withDuration: duration, animations: { 
+                self.cellImage.alpha = 1.0
+            })
         }
 
         title.text = viewModel.title()
@@ -31,5 +36,6 @@ class ImageCell: UITableViewCell {
 
         viewModel?.cancelImageDownload()
         cellImage.image = nil
+        cellImage.alpha = 0.0
     }
 }

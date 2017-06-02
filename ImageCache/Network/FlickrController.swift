@@ -25,7 +25,7 @@ class FlickrController: WebServiceController {
 }
 
 extension FlickrController: ImageCacheDelegate {
-    func loadImageAtURL(_ url: URL, completion: @escaping (UIImage?, Error?) -> ()) -> URLSessionDataTask? {
+    func loadImageAtURL(_ url: URL, completion: @escaping ImageCache.RemoteImageCompletion) -> URLSessionDataTask? {
         return getImage(url) { (image, response, error) in
             ImageCache.shared.cacheImage(image, forURL: url)
             completion(image, error)
