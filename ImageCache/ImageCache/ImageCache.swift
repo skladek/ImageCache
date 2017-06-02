@@ -26,11 +26,15 @@ class ImageCache {
             return
         }
 
-        cache.setObject(image, forKey: url.absoluteString as AnyObject)
+        cache.setObject(image, forKey: url.path as AnyObject)
     }
 
-    func getImage(url: URL, completion: @escaping ImageCompletion) -> URLSessionDataTask? {
-        if let image = retrieveFromCache(url: url) {
+    func emptyCache() {
+        cache.removeAllObjects()
+    }
+
+    func getImage(url: URL, skipCache: Bool = false, completion: @escaping ImageCompletion) -> URLSessionDataTask? {
+        if let image = retrieveFromCache(url: url), skipCache == false {
             completion(image, nil)
             return nil
         }
@@ -38,7 +42,11 @@ class ImageCache {
         return delegate?.loadImageAtURL(url, completion: completion)
     }
 
+    private func imageNameFromURL(_ url: URL) -> String {
+        return url.lastPathComponent
+    }
+
     private func retrieveFromCache(url: URL) -> UIImage? {
-        return cache.object(forKey: url.absoluteString as AnyObject)
+        return cache.object(forKey: url.path as AnyObject)
     }
 }
