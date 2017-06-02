@@ -14,13 +14,22 @@ class ImageCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
 
+    private var viewModel: ImageViewModel?
+
     func setViewModel(_ viewModel: ImageViewModel) {
+        self.viewModel = viewModel
+
         viewModel.image { (image, error) in
             self.cellImage.image = image
-
-            print(error)
         }
 
         title.text = viewModel.title()
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        viewModel?.cancelImageDownload()
+        cellImage.image = nil
     }
 }

@@ -12,8 +12,14 @@ class ImageViewModel: NSObject {
 
     let image: Image
 
+    private var imageDownloadTask: URLSessionDataTask?
+
     init(image: Image) {
         self.image = image
+    }
+
+    func cancelImageDownload() {
+        imageDownloadTask?.cancel()
     }
 
     func image(completion: @escaping (UIImage?, Error?) -> ()) {
@@ -21,7 +27,7 @@ class ImageViewModel: NSObject {
             return
         }
 
-        FlickrController.shared.getImage(url) { (image, response, error) in
+        imageDownloadTask = FlickrController.shared.getImage(url) { (image, response, error) in
             completion(image, error)
         }
     }
