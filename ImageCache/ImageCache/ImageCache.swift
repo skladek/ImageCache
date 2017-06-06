@@ -24,13 +24,23 @@ public class ImageCache {
 
     public static let shared = ImageCache()
 
-    // MARK: Instance Variables
+    // MARK: Public Variables
 
     public var delegate: ImageCacheDelegate?
 
-    // MARK: Private Variables
+    // MARK: Internal Variables
 
-    private let cache = NSCache<AnyObject, UIImage>()
+    let cache: NSCache<AnyObject, UIImage>
+
+    // MARK: Init Methods
+
+    init() {
+        self.cache = NSCache<AnyObject, UIImage>()
+    }
+
+    init(cache: NSCache<AnyObject, UIImage>) {
+        self.cache = cache
+    }
 
     // MARK: Instance Methods
 
@@ -39,7 +49,7 @@ public class ImageCache {
             return
         }
 
-        let imageName = imageNameFromURL(url) as AnyObject
+        let imageName = imageNameFromURL(url)
         cache.setObject(image, forKey: imageName)
     }
 
@@ -53,24 +63,25 @@ public class ImageCache {
             return nil
         }
 
-        return delegate?.loadImageAtURL(url, completion: { (image, error) in
+        return delegate?.loadImageAtURL(url, completion: { [weak self] (image, error) in
+            self?.cacheImage(image, forURL: url)
             completion(image, false, error)
         })
     }
 
     public func removeObjectAtURL(_ url: URL) {
-        let imageName = imageNameFromURL(url) as AnyObject
+        let imageName = imageNameFromURL(url)
         cache.removeObject(forKey: imageName)
     }
 
     // MARK: Private Methods
 
-    private func imageNameFromURL(_ url: URL) -> String {
-        return url.lastPathComponent
+    private func imageNameFromURL(_ url: URL) -> AnyObject {
+        return url.lastPathComponent as AnyObject
     }
 
     private func retrieveFromCache(url: URL) -> UIImage? {
-        let imageName = imageNameFromURL(url) as AnyObject
+        let imageName = imageNameFromURL(url)
         return cache.object(forKey: imageName)
     }
 }
