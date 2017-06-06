@@ -17,7 +17,6 @@
 		147FBC9B1EE74F6500D2441D /* URLConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC821EE74F6500D2441D /* URLConstructor.swift */; };
 		147FBC9C1EE74F6500D2441D /* WebServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC831EE74F6500D2441D /* WebServiceController.swift */; };
 		147FBC9D1EE74F6500D2441D /* WebServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC841EE74F6500D2441D /* WebServiceError.swift */; };
-		147FBC9E1EE74F6500D2441D /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC861EE74F6500D2441D /* ImageCache.swift */; };
 		147FBC9F1EE74F6500D2441D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC881EE74F6500D2441D /* Image.swift */; };
 		147FBCA01EE74F6500D2441D /* FlickrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC8A1EE74F6500D2441D /* FlickrController.swift */; };
 		147FBCA11EE74F6500D2441D /* ImagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC8B1EE74F6500D2441D /* ImagesController.swift */; };
@@ -57,7 +56,6 @@
 		147FBC821EE74F6500D2441D /* URLConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConstructor.swift; sourceTree = "<group>"; };
 		147FBC831EE74F6500D2441D /* WebServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceController.swift; sourceTree = "<group>"; };
 		147FBC841EE74F6500D2441D /* WebServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceError.swift; sourceTree = "<group>"; };
-		147FBC861EE74F6500D2441D /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		147FBC881EE74F6500D2441D /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		147FBC8A1EE74F6500D2441D /* FlickrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrController.swift; sourceTree = "<group>"; };
 		147FBC8B1EE74F6500D2441D /* ImagesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesController.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 			children = (
 				147FBC771EE74F6500D2441D /* Application */,
 				147FBC7E1EE74F6500D2441D /* Controllers */,
-				147FBC851EE74F6500D2441D /* ImageCache */,
 				147FBC871EE74F6500D2441D /* Models */,
 				147FBC891EE74F6500D2441D /* Network */,
 				147FBC8C1EE74F6500D2441D /* ViewControllers */,
@@ -122,14 +119,6 @@
 				147FBC841EE74F6500D2441D /* WebServiceError.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		147FBC851EE74F6500D2441D /* ImageCache */ = {
-			isa = PBXGroup;
-			children = (
-				147FBC861EE74F6500D2441D /* ImageCache.swift */,
-			);
-			path = ImageCache;
 			sourceTree = "<group>";
 		};
 		147FBC871EE74F6500D2441D /* Models */ = {
@@ -322,7 +311,6 @@
 				147FBC9C1EE74F6500D2441D /* WebServiceController.swift in Sources */,
 				147FBC9F1EE74F6500D2441D /* Image.swift in Sources */,
 				147FBC981EE74F6500D2441D /* JSONHandler.swift in Sources */,
-				147FBC9E1EE74F6500D2441D /* ImageCache.swift in Sources */,
 				147FBCA51EE74F6500D2441D /* ImageCell.swift in Sources */,
 				147FBC941EE74F6500D2441D /* AppDelegate.swift in Sources */,
 				147FBC9A1EE74F6500D2441D /* TableViewDataSource.swift in Sources */,

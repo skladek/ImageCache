@@ -8,25 +8,25 @@
 
 import UIKit
 
-protocol ImageCacheDelegate {
+public protocol ImageCacheDelegate {
     func loadImageAtURL(_ url: URL, completion: @escaping ImageCache.RemoteImageCompletion) -> URLSessionDataTask?
 }
 
-class ImageCache {
+public class ImageCache {
 
     // MARK: Class Types
 
-    typealias ImageCompletion = (UIImage?, Bool, Error?) -> ()
+    public typealias ImageCompletion = (UIImage?, Bool, Error?) -> ()
 
-    typealias RemoteImageCompletion = (UIImage?, Error?) -> ()
+    public typealias RemoteImageCompletion = (UIImage?, Error?) -> ()
 
     // MARK: Class Variables
 
-    static let shared = ImageCache()
+    public static let shared = ImageCache()
 
     // MARK: Instance Variables
 
-    var delegate: ImageCacheDelegate?
+    public var delegate: ImageCacheDelegate?
 
     // MARK: Private Variables
 
@@ -34,7 +34,7 @@ class ImageCache {
 
     // MARK: Instance Methods
 
-    func cacheImage(_ image: UIImage?, forURL url: URL) {
+    public func cacheImage(_ image: UIImage?, forURL url: URL) {
         guard let image = image else {
             return
         }
@@ -43,11 +43,11 @@ class ImageCache {
         cache.setObject(image, forKey: imageName)
     }
 
-    func emptyCache() {
+    public func emptyCache() {
         cache.removeAllObjects()
     }
 
-    func getImage(url: URL, skipCache: Bool = false, completion: @escaping ImageCompletion) -> URLSessionDataTask? {
+    public func getImage(url: URL, skipCache: Bool = false, completion: @escaping ImageCompletion) -> URLSessionDataTask? {
         if let image = retrieveFromCache(url: url), skipCache == false {
             completion(image, true, nil)
             return nil
@@ -58,7 +58,7 @@ class ImageCache {
         })
     }
 
-    func removeObjectAtURL(_ url: URL) {
+    public func removeObjectAtURL(_ url: URL) {
         let imageName = imageNameFromURL(url) as AnyObject
         cache.removeObject(forKey: imageName)
     }

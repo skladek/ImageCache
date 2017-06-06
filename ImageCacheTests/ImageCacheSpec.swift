@@ -19,6 +19,10 @@ class ImageCacheSpec: QuickSpec {
                 it("Should pass") {
                     expect(1).to(equal(1))
                 }
+
+                it("Should pass twice") {
+                    expect(1 == 1).to(beTrue())
+                }
             }
         }
     }

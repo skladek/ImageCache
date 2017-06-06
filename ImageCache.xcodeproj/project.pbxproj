@@ -10,6 +10,7 @@
 		147FBCBB1EE74F7A00D2441D /* ImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147FBCB11EE74F7A00D2441D /* ImageCache.framework */; };
 		147FBCC01EE74F7A00D2441D /* ImageCacheSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBCBF1EE74F7A00D2441D /* ImageCacheSpec.swift */; };
 		147FBCC21EE74F7A00D2441D /* ImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 147FBCB41EE74F7A00D2441D /* ImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1486E15F1EE754CD000C3877 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486E15E1EE754CD000C3877 /* ImageCache.swift */; };
 		62AA443E060F731CB3B699E7 /* Pods_ImageCacheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0040B367E83FFB3E96778EF /* Pods_ImageCacheTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		147FBCBA1EE74F7A00D2441D /* ImageCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		147FBCBF1EE74F7A00D2441D /* ImageCacheSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheSpec.swift; sourceTree = "<group>"; };
 		147FBCC11EE74F7A00D2441D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1486E15E1EE754CD000C3877 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		6C341D3CFB55C1C9F0781E34 /* Pods-ImageCacheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCacheTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8CA8E338BE79D6476C6FD9CA /* Pods-ImageCacheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCacheTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests.release.xcconfig"; sourceTree = "<group>"; };
 		A0040B367E83FFB3E96778EF /* Pods_ImageCacheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCacheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 		147FBCB31EE74F7A00D2441D /* ImageCache */ = {
 			isa = PBXGroup;
 			children = (
+				1486E15D1EE754CD000C3877 /* ImageCache */,
 				147FBCB41EE74F7A00D2441D /* ImageCache.h */,
 				147FBCB51EE74F7A00D2441D /* Info.plist */,
 			);
@@ -91,6 +94,14 @@
 				147FBCC11EE74F7A00D2441D /* Info.plist */,
 			);
 			path = ImageCacheTests;
+			sourceTree = "<group>";
+		};
+		1486E15D1EE754CD000C3877 /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				1486E15E1EE754CD000C3877 /* ImageCache.swift */,
+			);
+			path = ImageCache;
 			sourceTree = "<group>";
 		};
 		1D0EA7BC45161B2437E0C23F /* Pods */ = {
@@ -273,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1486E15F1EE754CD000C3877 /* ImageCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C341D3CFB55C1C9F0781E34 /* Pods-ImageCacheTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = MV978XDK83;
 				INFOPLIST_FILE = ImageCacheTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -451,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8CA8E338BE79D6476C6FD9CA /* Pods-ImageCacheTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = MV978XDK83;
 				INFOPLIST_FILE = ImageCacheTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

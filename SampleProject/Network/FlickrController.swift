@@ -6,6 +6,7 @@
 //  Copyright © 2017 Sean Kladek. All rights reserved.
 //
 
+import ImageCache
 import UIKit
 
 class FlickrController: WebServiceController {
