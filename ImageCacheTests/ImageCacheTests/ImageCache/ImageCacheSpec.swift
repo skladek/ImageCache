@@ -15,14 +15,17 @@ import Quick
 class ImageCacheSpec: QuickSpec {
     override func spec() {
         describe("ImageCache") {
+            var delegate: MockImageCacheDelegate!
             var mockNSCache: MockNSCache!
             var unitUnderTest: ImageCache!
             var url: URL!
 
             beforeEach {
+                delegate = MockImageCacheDelegate()
                 mockNSCache = MockNSCache()
                 url = URL(string: "http://example.url/image1.png")!
                 unitUnderTest = ImageCache(cache: mockNSCache)
+                unitUnderTest.delegate = delegate
             }
 
             context("init()") {
@@ -72,6 +75,31 @@ class ImageCacheSpec: QuickSpec {
                     let _ = unitUnderTest.getImage(url: url, completion: { (_, fromCache, _) in
                         expect(fromCache).to(beTrue())
                     })
+                }
+
+                it("Should call loadURL on the delegate if one is set") {
+                    mockNSCache.shouldReturnImage = false
+                    let _ = unitUnderTest.getImage(url: url, completion: { (_, fromCache, _) in })
+                    expect(delegate.loadImageAtURLCalled).to(beTrue())
+                }
+
+                it("Should cache the image returned by the delegate at the provided URL before returning through the closure") {
+                    unitUnderTest = ImageCache()
+                    unitUnderTest.delegate = delegate
+
+                    waitUntil { done in
+                        let _ = unitUnderTest.getImage(url: url, completion: { (image, _, _) in
+                            expect(unitUnderTest.cache.object(forKey: url.lastPathComponent as AnyObject)).to(be(image))
+                            done()
+                        })
+                    }
+                }
+            }
+
+            context("removeObjectAtURL(_:)") {
+                it("Should call remove object on the cache") {
+                    unitUnderTest.removeObjectAtURL(url)
+                    expect(mockNSCache.removeObjectCalled).to(beTrue())
                 }
             }
         }

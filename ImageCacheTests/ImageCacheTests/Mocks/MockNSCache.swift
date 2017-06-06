@@ -12,6 +12,7 @@ import UIKit
 open class MockNSCache: NSCache<AnyObject, UIImage> {
     var objectForKeyCalled = false
     var removeAllObjectsCalled = false
+    var removeObjectCalled = false
     var setObjectCalled = false
     var shouldReturnImage = false
 
@@ -26,6 +27,10 @@ open class MockNSCache: NSCache<AnyObject, UIImage> {
 
     open override func removeAllObjects() {
         removeAllObjectsCalled = true
+    }
+
+    open override func removeObject(forKey key: AnyObject) {
+        removeObjectCalled = true
     }
 
     open override func setObject(_ obj: UIImage, forKey key: AnyObject) {
