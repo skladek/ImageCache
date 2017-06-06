@@ -399,7 +399,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = ImageCache/Application/ImageCacheBridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = SampleProject/Application/ImageCacheBridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -448,7 +448,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = ImageCache/Application/ImageCacheBridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = SampleProject/Application/ImageCacheBridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -459,7 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MV978XDK83;
-				INFOPLIST_FILE = "$(SRCROOT)/ImageCache/Application/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SampleProject/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.ImageCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,7 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MV978XDK83;
-				INFOPLIST_FILE = "$(SRCROOT)/ImageCache/Application/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SampleProject/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.ImageCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
