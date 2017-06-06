@@ -7,210 +7,131 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14D90F1F1EDF5220002D0ABA /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F1E1EDF5220002D0ABA /* ImageCacheTests.swift */; };
-		14D90F301EDF547F002D0ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F2A1EDF547F002D0ABA /* AppDelegate.swift */; };
-		14D90F311EDF547F002D0ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D90F2B1EDF547F002D0ABA /* Assets.xcassets */; };
-		14D90F321EDF547F002D0ABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D90F2C1EDF547F002D0ABA /* LaunchScreen.storyboard */; };
-		14D90F361EDF548D002D0ABA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F341EDF548D002D0ABA /* HomeViewController.swift */; };
-		14D90F371EDF548D002D0ABA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D90F351EDF548D002D0ABA /* HomeViewController.xib */; };
-		14D90F3F1EDF54E7002D0ABA /* JSONHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F391EDF54E7002D0ABA /* JSONHandler.swift */; };
-		14D90F401EDF54E7002D0ABA /* JSONHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F3A1EDF54E7002D0ABA /* JSONHandling.swift */; };
-		14D90F411EDF54E7002D0ABA /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F3B1EDF54E7002D0ABA /* TableViewDataSource.swift */; };
-		14D90F421EDF54E7002D0ABA /* URLConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F3C1EDF54E7002D0ABA /* URLConstructor.swift */; };
-		14D90F431EDF54E7002D0ABA /* WebServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F3D1EDF54E7002D0ABA /* WebServiceController.swift */; };
-		14D90F441EDF54E7002D0ABA /* WebServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F3E1EDF54E7002D0ABA /* WebServiceError.swift */; };
-		14D90F4C1EE0791D002D0ABA /* FlickrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F4B1EE0791D002D0ABA /* FlickrController.swift */; };
-		14D90F4E1EE07981002D0ABA /* ImagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F4D1EE07981002D0ABA /* ImagesController.swift */; };
-		14D90F531EE07D1E002D0ABA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F521EE07D1E002D0ABA /* Image.swift */; };
-		14D90F5F1EE08A7B002D0ABA /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F5B1EE08A7B002D0ABA /* ImageViewModel.swift */; };
-		14D90F601EE08A7B002D0ABA /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90F5D1EE08A7B002D0ABA /* ImageCell.swift */; };
-		14D90F611EE08A7B002D0ABA /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D90F5E1EE08A7B002D0ABA /* ImageCell.xib */; };
-		14D915D11EE11C7E002D0ABA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D915D01EE11C7E002D0ABA /* ImageCache.swift */; };
+		147FBCBB1EE74F7A00D2441D /* ImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147FBCB11EE74F7A00D2441D /* ImageCache.framework */; };
+		147FBCC01EE74F7A00D2441D /* ImageCacheSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBCBF1EE74F7A00D2441D /* ImageCacheSpec.swift */; };
+		147FBCC21EE74F7A00D2441D /* ImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 147FBCB41EE74F7A00D2441D /* ImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62AA443E060F731CB3B699E7 /* Pods_ImageCacheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0040B367E83FFB3E96778EF /* Pods_ImageCacheTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		14D90F1B1EDF5220002D0ABA /* PBXContainerItemProxy */ = {
+		147FBCBC1EE74F7A00D2441D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 14D90EFE1EDF5220002D0ABA /* Project object */;
+			containerPortal = 147FBCA81EE74F7A00D2441D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 14D90F051EDF5220002D0ABA;
+			remoteGlobalIDString = 147FBCB01EE74F7A00D2441D;
 			remoteInfo = ImageCache;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14D90F061EDF5220002D0ABA /* ImageCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		14D90F1A1EDF5220002D0ABA /* ImageCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14D90F1E1EDF5220002D0ABA /* ImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
-		14D90F201EDF5220002D0ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14D90F2A1EDF547F002D0ABA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14D90F2B1EDF547F002D0ABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		14D90F2D1EDF547F002D0ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		14D90F2E1EDF547F002D0ABA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14D90F341EDF548D002D0ABA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		14D90F351EDF548D002D0ABA /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		14D90F391EDF54E7002D0ABA /* JSONHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHandler.swift; sourceTree = "<group>"; };
-		14D90F3A1EDF54E7002D0ABA /* JSONHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHandling.swift; sourceTree = "<group>"; };
-		14D90F3B1EDF54E7002D0ABA /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
-		14D90F3C1EDF54E7002D0ABA /* URLConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConstructor.swift; sourceTree = "<group>"; };
-		14D90F3D1EDF54E7002D0ABA /* WebServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceController.swift; sourceTree = "<group>"; };
-		14D90F3E1EDF54E7002D0ABA /* WebServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceError.swift; sourceTree = "<group>"; };
-		14D90F451EDF55EA002D0ABA /* ImageCacheBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCacheBridgingHeader.h; sourceTree = "<group>"; };
-		14D90F4B1EE0791D002D0ABA /* FlickrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrController.swift; sourceTree = "<group>"; };
-		14D90F4D1EE07981002D0ABA /* ImagesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesController.swift; sourceTree = "<group>"; };
-		14D90F521EE07D1E002D0ABA /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		14D90F5B1EE08A7B002D0ABA /* ImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
-		14D90F5D1EE08A7B002D0ABA /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
-		14D90F5E1EE08A7B002D0ABA /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
-		14D915D01EE11C7E002D0ABA /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		147FBCB11EE74F7A00D2441D /* ImageCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		147FBCB41EE74F7A00D2441D /* ImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		147FBCB51EE74F7A00D2441D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		147FBCBA1EE74F7A00D2441D /* ImageCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		147FBCBF1EE74F7A00D2441D /* ImageCacheSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheSpec.swift; sourceTree = "<group>"; };
+		147FBCC11EE74F7A00D2441D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C341D3CFB55C1C9F0781E34 /* Pods-ImageCacheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCacheTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8CA8E338BE79D6476C6FD9CA /* Pods-ImageCacheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCacheTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests.release.xcconfig"; sourceTree = "<group>"; };
+		A0040B367E83FFB3E96778EF /* Pods_ImageCacheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCacheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		14D90F031EDF5220002D0ABA /* Frameworks */ = {
+		147FBCAD1EE74F7A00D2441D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14D90F171EDF5220002D0ABA /* Frameworks */ = {
+		147FBCB71EE74F7A00D2441D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				147FBCBB1EE74F7A00D2441D /* ImageCache.framework in Frameworks */,
+				62AA443E060F731CB3B699E7 /* Pods_ImageCacheTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14D90EFD1EDF5220002D0ABA = {
+		147FBCA71EE74F7A00D2441D = {
 			isa = PBXGroup;
 			children = (
-				14D90F081EDF5220002D0ABA /* ImageCache */,
-				14D90F1D1EDF5220002D0ABA /* ImageCacheTests */,
-				14D90F071EDF5220002D0ABA /* Products */,
+				147FBCB31EE74F7A00D2441D /* ImageCache */,
+				147FBCBE1EE74F7A00D2441D /* ImageCacheTests */,
+				147FBCB21EE74F7A00D2441D /* Products */,
+				1D0EA7BC45161B2437E0C23F /* Pods */,
+				5A74097DD7208F0EC568AB72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		14D90F071EDF5220002D0ABA /* Products */ = {
+		147FBCB21EE74F7A00D2441D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14D90F061EDF5220002D0ABA /* ImageCache.app */,
-				14D90F1A1EDF5220002D0ABA /* ImageCacheTests.xctest */,
+				147FBCB11EE74F7A00D2441D /* ImageCache.framework */,
+				147FBCBA1EE74F7A00D2441D /* ImageCacheTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14D90F081EDF5220002D0ABA /* ImageCache */ = {
+		147FBCB31EE74F7A00D2441D /* ImageCache */ = {
 			isa = PBXGroup;
 			children = (
-				14D90F291EDF547F002D0ABA /* Application */,
-				14D90F381EDF54E7002D0ABA /* Controllers */,
-				14D915CF1EE11C7E002D0ABA /* ImageCache */,
-				14D90F511EE07D1E002D0ABA /* Models */,
-				14D90F4A1EE0791D002D0ABA /* Network */,
-				14D90F2F1EDF547F002D0ABA /* ViewControllers */,
-				14D90F5A1EE08A7B002D0ABA /* ViewModels */,
-				14D90F5C1EE08A7B002D0ABA /* Views */,
+				147FBCB41EE74F7A00D2441D /* ImageCache.h */,
+				147FBCB51EE74F7A00D2441D /* Info.plist */,
 			);
 			path = ImageCache;
 			sourceTree = "<group>";
 		};
-		14D90F1D1EDF5220002D0ABA /* ImageCacheTests */ = {
+		147FBCBE1EE74F7A00D2441D /* ImageCacheTests */ = {
 			isa = PBXGroup;
 			children = (
-				14D90F1E1EDF5220002D0ABA /* ImageCacheTests.swift */,
-				14D90F201EDF5220002D0ABA /* Info.plist */,
+				147FBCBF1EE74F7A00D2441D /* ImageCacheSpec.swift */,
+				147FBCC11EE74F7A00D2441D /* Info.plist */,
 			);
 			path = ImageCacheTests;
 			sourceTree = "<group>";
 		};
-		14D90F291EDF547F002D0ABA /* Application */ = {
+		1D0EA7BC45161B2437E0C23F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				14D90F2A1EDF547F002D0ABA /* AppDelegate.swift */,
-				14D90F2B1EDF547F002D0ABA /* Assets.xcassets */,
-				14D90F451EDF55EA002D0ABA /* ImageCacheBridgingHeader.h */,
-				14D90F2E1EDF547F002D0ABA /* Info.plist */,
-				14D90F2C1EDF547F002D0ABA /* LaunchScreen.storyboard */,
+				6C341D3CFB55C1C9F0781E34 /* Pods-ImageCacheTests.debug.xcconfig */,
+				8CA8E338BE79D6476C6FD9CA /* Pods-ImageCacheTests.release.xcconfig */,
 			);
-			path = Application;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		14D90F2F1EDF547F002D0ABA /* ViewControllers */ = {
+		5A74097DD7208F0EC568AB72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				14D90F341EDF548D002D0ABA /* HomeViewController.swift */,
-				14D90F351EDF548D002D0ABA /* HomeViewController.xib */,
+				A0040B367E83FFB3E96778EF /* Pods_ImageCacheTests.framework */,
 			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		14D90F381EDF54E7002D0ABA /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				14D90F391EDF54E7002D0ABA /* JSONHandler.swift */,
-				14D90F3A1EDF54E7002D0ABA /* JSONHandling.swift */,
-				14D90F3B1EDF54E7002D0ABA /* TableViewDataSource.swift */,
-				14D90F3C1EDF54E7002D0ABA /* URLConstructor.swift */,
-				14D90F3D1EDF54E7002D0ABA /* WebServiceController.swift */,
-				14D90F3E1EDF54E7002D0ABA /* WebServiceError.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		14D90F4A1EE0791D002D0ABA /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				14D90F4B1EE0791D002D0ABA /* FlickrController.swift */,
-				14D90F4D1EE07981002D0ABA /* ImagesController.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		14D90F511EE07D1E002D0ABA /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				14D90F521EE07D1E002D0ABA /* Image.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		14D90F5A1EE08A7B002D0ABA /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				14D90F5B1EE08A7B002D0ABA /* ImageViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		14D90F5C1EE08A7B002D0ABA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				14D90F5D1EE08A7B002D0ABA /* ImageCell.swift */,
-				14D90F5E1EE08A7B002D0ABA /* ImageCell.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		14D915CF1EE11C7E002D0ABA /* ImageCache */ = {
-			isa = PBXGroup;
-			children = (
-				14D915D01EE11C7E002D0ABA /* ImageCache.swift */,
-			);
-			path = ImageCache;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		147FBCAE1EE74F7A00D2441D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147FBCC21EE74F7A00D2441D /* ImageCache.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		14D90F051EDF5220002D0ABA /* ImageCache */ = {
+		147FBCB01EE74F7A00D2441D /* ImageCache */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14D90F231EDF5220002D0ABA /* Build configuration list for PBXNativeTarget "ImageCache" */;
+			buildConfigurationList = 147FBCC51EE74F7A00D2441D /* Build configuration list for PBXNativeTarget "ImageCache" */;
 			buildPhases = (
-				14D90F021EDF5220002D0ABA /* Sources */,
-				14D90F031EDF5220002D0ABA /* Frameworks */,
-				14D90F041EDF5220002D0ABA /* Resources */,
+				147FBCAC1EE74F7A00D2441D /* Sources */,
+				147FBCAD1EE74F7A00D2441D /* Frameworks */,
+				147FBCAE1EE74F7A00D2441D /* Headers */,
+				147FBCAF1EE74F7A00D2441D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -218,82 +139,79 @@
 			);
 			name = ImageCache;
 			productName = ImageCache;
-			productReference = 14D90F061EDF5220002D0ABA /* ImageCache.app */;
-			productType = "com.apple.product-type.application";
+			productReference = 147FBCB11EE74F7A00D2441D /* ImageCache.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		14D90F191EDF5220002D0ABA /* ImageCacheTests */ = {
+		147FBCB91EE74F7A00D2441D /* ImageCacheTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14D90F261EDF5220002D0ABA /* Build configuration list for PBXNativeTarget "ImageCacheTests" */;
+			buildConfigurationList = 147FBCC81EE74F7A00D2441D /* Build configuration list for PBXNativeTarget "ImageCacheTests" */;
 			buildPhases = (
-				14D90F161EDF5220002D0ABA /* Sources */,
-				14D90F171EDF5220002D0ABA /* Frameworks */,
-				14D90F181EDF5220002D0ABA /* Resources */,
+				EEBA4F8850E9313D49283A55 /* [CP] Check Pods Manifest.lock */,
+				147FBCB61EE74F7A00D2441D /* Sources */,
+				147FBCB71EE74F7A00D2441D /* Frameworks */,
+				147FBCB81EE74F7A00D2441D /* Resources */,
+				EBE7D7C39E99426DB9511658 /* [CP] Embed Pods Frameworks */,
+				0260C7F50837EE355762B452 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				14D90F1C1EDF5220002D0ABA /* PBXTargetDependency */,
+				147FBCBD1EE74F7A00D2441D /* PBXTargetDependency */,
 			);
 			name = ImageCacheTests;
 			productName = ImageCacheTests;
-			productReference = 14D90F1A1EDF5220002D0ABA /* ImageCacheTests.xctest */;
+			productReference = 147FBCBA1EE74F7A00D2441D /* ImageCacheTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		14D90EFE1EDF5220002D0ABA /* Project object */ = {
+		147FBCA81EE74F7A00D2441D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Sean Kladek";
 				TargetAttributes = {
-					14D90F051EDF5220002D0ABA = {
+					147FBCB01EE74F7A00D2441D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = MV978XDK83;
 						ProvisioningStyle = Automatic;
 					};
-					14D90F191EDF5220002D0ABA = {
+					147FBCB91EE74F7A00D2441D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = MV978XDK83;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 14D90F051EDF5220002D0ABA;
 					};
 				};
 			};
-			buildConfigurationList = 14D90F011EDF5220002D0ABA /* Build configuration list for PBXProject "ImageCache" */;
+			buildConfigurationList = 147FBCAB1EE74F7A00D2441D /* Build configuration list for PBXProject "ImageCache" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 14D90EFD1EDF5220002D0ABA;
-			productRefGroup = 14D90F071EDF5220002D0ABA /* Products */;
+			mainGroup = 147FBCA71EE74F7A00D2441D;
+			productRefGroup = 147FBCB21EE74F7A00D2441D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14D90F051EDF5220002D0ABA /* ImageCache */,
-				14D90F191EDF5220002D0ABA /* ImageCacheTests */,
+				147FBCB01EE74F7A00D2441D /* ImageCache */,
+				147FBCB91EE74F7A00D2441D /* ImageCacheTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		14D90F041EDF5220002D0ABA /* Resources */ = {
+		147FBCAF1EE74F7A00D2441D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14D90F311EDF547F002D0ABA /* Assets.xcassets in Resources */,
-				14D90F321EDF547F002D0ABA /* LaunchScreen.storyboard in Resources */,
-				14D90F611EE08A7B002D0ABA /* ImageCell.xib in Resources */,
-				14D90F371EDF548D002D0ABA /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14D90F181EDF5220002D0ABA /* Resources */ = {
+		147FBCB81EE74F7A00D2441D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,64 +220,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0260C7F50837EE355762B452 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBE7D7C39E99426DB9511658 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEBA4F8850E9313D49283A55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		14D90F021EDF5220002D0ABA /* Sources */ = {
+		147FBCAC1EE74F7A00D2441D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14D90F421EDF54E7002D0ABA /* URLConstructor.swift in Sources */,
-				14D90F441EDF54E7002D0ABA /* WebServiceError.swift in Sources */,
-				14D90F431EDF54E7002D0ABA /* WebServiceController.swift in Sources */,
-				14D90F401EDF54E7002D0ABA /* JSONHandling.swift in Sources */,
-				14D90F411EDF54E7002D0ABA /* TableViewDataSource.swift in Sources */,
-				14D90F301EDF547F002D0ABA /* AppDelegate.swift in Sources */,
-				14D90F5F1EE08A7B002D0ABA /* ImageViewModel.swift in Sources */,
-				14D90F3F1EDF54E7002D0ABA /* JSONHandler.swift in Sources */,
-				14D90F4C1EE0791D002D0ABA /* FlickrController.swift in Sources */,
-				14D90F361EDF548D002D0ABA /* HomeViewController.swift in Sources */,
-				14D90F531EE07D1E002D0ABA /* Image.swift in Sources */,
-				14D90F4E1EE07981002D0ABA /* ImagesController.swift in Sources */,
-				14D915D11EE11C7E002D0ABA /* ImageCache.swift in Sources */,
-				14D90F601EE08A7B002D0ABA /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14D90F161EDF5220002D0ABA /* Sources */ = {
+		147FBCB61EE74F7A00D2441D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14D90F1F1EDF5220002D0ABA /* ImageCacheTests.swift in Sources */,
+				147FBCC01EE74F7A00D2441D /* ImageCacheSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		14D90F1C1EDF5220002D0ABA /* PBXTargetDependency */ = {
+		147FBCBD1EE74F7A00D2441D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14D90F051EDF5220002D0ABA /* ImageCache */;
-			targetProxy = 14D90F1B1EDF5220002D0ABA /* PBXContainerItemProxy */;
+			target = 147FBCB01EE74F7A00D2441D /* ImageCache */;
+			targetProxy = 147FBCBC1EE74F7A00D2441D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		14D90F2C1EDF547F002D0ABA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14D90F2D1EDF547F002D0ABA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		14D90F211EDF5220002D0ABA /* Debug */ = {
+		147FBCC31EE74F7A00D2441D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				API_KEY = a3d2b3ea217dc4dce7beb8d800ec63bc;
-				BASE_URL = "https://api.flickr.com/services/rest/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -380,6 +319,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -390,8 +330,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					"BASE_URL=(@\\\"${BASE_URL}\\\")",
-					"API_KEY=(@\\\"${API_KEY}\\\")",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -404,17 +342,17 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = ImageCache/Application/ImageCacheBridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		14D90F221EDF5220002D0ABA /* Release */ = {
+		147FBCC41EE74F7A00D2441D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				API_KEY = a3d2b3ea217dc4dce7beb8d800ec63bc;
-				BASE_URL = "https://api.flickr.com/services/rest/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -435,15 +373,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"BASE_URL=(@\\\"${BASE_URL}\\\")",
-					"API_KEY=(@\\\"${API_KEY}\\\")",
-				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -453,99 +388,109 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = ImageCache/Application/ImageCacheBridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		14D90F241EDF5220002D0ABA /* Debug */ = {
+		147FBCC61EE74F7A00D2441D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MV978XDK83;
-				INFOPLIST_FILE = "$(SRCROOT)/ImageCache/Application/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ImageCache/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.ImageCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		14D90F251EDF5220002D0ABA /* Release */ = {
+		147FBCC71EE74F7A00D2441D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MV978XDK83;
-				INFOPLIST_FILE = "$(SRCROOT)/ImageCache/Application/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ImageCache/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.ImageCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		14D90F271EDF5220002D0ABA /* Debug */ = {
+		147FBCC91EE74F7A00D2441D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C341D3CFB55C1C9F0781E34 /* Pods-ImageCacheTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = MV978XDK83;
 				INFOPLIST_FILE = ImageCacheTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.ImageCacheTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageCache.app/ImageCache";
 			};
 			name = Debug;
 		};
-		14D90F281EDF5220002D0ABA /* Release */ = {
+		147FBCCA1EE74F7A00D2441D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CA8E338BE79D6476C6FD9CA /* Pods-ImageCacheTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = MV978XDK83;
 				INFOPLIST_FILE = ImageCacheTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.ImageCacheTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageCache.app/ImageCache";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14D90F011EDF5220002D0ABA /* Build configuration list for PBXProject "ImageCache" */ = {
+		147FBCAB1EE74F7A00D2441D /* Build configuration list for PBXProject "ImageCache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14D90F211EDF5220002D0ABA /* Debug */,
-				14D90F221EDF5220002D0ABA /* Release */,
+				147FBCC31EE74F7A00D2441D /* Debug */,
+				147FBCC41EE74F7A00D2441D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14D90F231EDF5220002D0ABA /* Build configuration list for PBXNativeTarget "ImageCache" */ = {
+		147FBCC51EE74F7A00D2441D /* Build configuration list for PBXNativeTarget "ImageCache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14D90F241EDF5220002D0ABA /* Debug */,
-				14D90F251EDF5220002D0ABA /* Release */,
+				147FBCC61EE74F7A00D2441D /* Debug */,
+				147FBCC71EE74F7A00D2441D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14D90F261EDF5220002D0ABA /* Build configuration list for PBXNativeTarget "ImageCacheTests" */ = {
+		147FBCC81EE74F7A00D2441D /* Build configuration list for PBXNativeTarget "ImageCacheTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14D90F271EDF5220002D0ABA /* Debug */,
-				14D90F281EDF5220002D0ABA /* Release */,
+				147FBCC91EE74F7A00D2441D /* Debug */,
+				147FBCCA1EE74F7A00D2441D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 14D90EFE1EDF5220002D0ABA /* Project object */;
+	rootObject = 147FBCA81EE74F7A00D2441D /* Project object */;
 }
