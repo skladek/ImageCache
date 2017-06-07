@@ -14,6 +14,7 @@
 		143BDB611EE848D30080C9EA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BDB601EE848D30080C9EA /* ImageCache.swift */; };
 		14BD4FC91EE847A0000218B7 /* ImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BD4FBF1EE847A0000218B7 /* ImageCache.framework */; };
 		14BD4FD01EE847A0000218B7 /* ImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 14BD4FC21EE847A0000218B7 /* ImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14F7D0351EE8A7D200C232AB /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7D0341EE8A7D200C232AB /* UIImageView.swift */; };
 		F13F43F97204760D728291D3 /* Pods_ImageCacheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06399296DB1BAB80C91C550 /* Pods_ImageCacheTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		14BD4FC31EE847A0000218B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14BD4FC81EE847A0000218B7 /* ImageCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BD4FCF1EE847A0000218B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14F7D0341EE8A7D200C232AB /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		BBA80831AACFB5647EFDD813 /* Pods-ImageCacheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCacheTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests.release.xcconfig"; sourceTree = "<group>"; };
 		C06399296DB1BAB80C91C550 /* Pods_ImageCacheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCacheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB2F35406C0598CECF0F31C /* Pods-ImageCacheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCacheTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				143BDB601EE848D30080C9EA /* ImageCache.swift */,
+				14F7D0341EE8A7D200C232AB /* UIImageView.swift */,
 			);
 			path = ImageCache;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F7D0351EE8A7D200C232AB /* UIImageView.swift in Sources */,
 				143BDB611EE848D30080C9EA /* ImageCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

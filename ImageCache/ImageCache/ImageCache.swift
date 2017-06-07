@@ -6,8 +6,6 @@
 //  Copyright © 2017 Sean Kladek. All rights reserved.
 //
 
-import UIKit
-
 public protocol ImageCacheDelegate {
     func loadImageAtURL(_ url: URL, completion: @escaping ImageCache.RemoteImageCompletion) -> URLSessionDataTask?
 }

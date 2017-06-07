@@ -23,6 +23,14 @@ class ImageViewModel: NSObject {
         imageDownloadTask?.cancel()
     }
 
+    func url() -> URL? {
+        return image.imageURL()
+    }
+
+    func placeholderName() -> String {
+        return "placeholderImage"
+    }
+
     func image(completion: @escaping ImageCache.ImageCompletion) {
         guard let url = image.imageURL() else {
             return
