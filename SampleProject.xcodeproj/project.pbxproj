@@ -10,7 +10,6 @@
 		147FBC941EE74F6500D2441D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC781EE74F6500D2441D /* AppDelegate.swift */; };
 		147FBC951EE74F6500D2441D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147FBC791EE74F6500D2441D /* Assets.xcassets */; };
 		147FBC961EE74F6500D2441D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147FBC7A1EE74F6500D2441D /* LaunchScreen.storyboard */; };
-		147FBC971EE74F6500D2441D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 147FBC7D1EE74F6500D2441D /* Info.plist */; };
 		147FBC981EE74F6500D2441D /* JSONHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC7F1EE74F6500D2441D /* JSONHandler.swift */; };
 		147FBC991EE74F6500D2441D /* JSONHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC801EE74F6500D2441D /* JSONHandling.swift */; };
 		147FBC9A1EE74F6500D2441D /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC811EE74F6500D2441D /* TableViewDataSource.swift */; };
@@ -294,7 +293,6 @@
 			files = (
 				147FBC951EE74F6500D2441D /* Assets.xcassets in Resources */,
 				147FBC961EE74F6500D2441D /* LaunchScreen.storyboard in Resources */,
-				147FBC971EE74F6500D2441D /* Info.plist in Resources */,
 				147FBCA61EE74F6500D2441D /* ImageCell.xib in Resources */,
 				147FBCA31EE74F6500D2441D /* HomeViewController.xib in Resources */,
 			);

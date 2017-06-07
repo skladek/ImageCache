@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "147FBCB01EE74F7A00D2441D"
+               BlueprintIdentifier = "14BD4FBE1EE847A0000218B7"
                BuildableName = "ImageCache.framework"
                BlueprintName = "ImageCache"
                ReferencedContainer = "container:ImageCache.xcodeproj">
@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "147FBCB91EE74F7A00D2441D"
+               BlueprintIdentifier = "14BD4FC71EE847A0000218B7"
                BuildableName = "ImageCacheTests.xctest"
                BlueprintName = "ImageCacheTests"
                ReferencedContainer = "container:ImageCache.xcodeproj">
@@ -43,7 +43,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "147FBCB01EE74F7A00D2441D"
+            BlueprintIdentifier = "14BD4FBE1EE847A0000218B7"
             BuildableName = "ImageCache.framework"
             BlueprintName = "ImageCache"
             ReferencedContainer = "container:ImageCache.xcodeproj">
@@ -65,7 +65,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "147FBCB01EE74F7A00D2441D"
+            BlueprintIdentifier = "14BD4FBE1EE847A0000218B7"
             BuildableName = "ImageCache.framework"
             BlueprintName = "ImageCache"
             ReferencedContainer = "container:ImageCache.xcodeproj">
@@ -83,7 +83,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "147FBCB01EE74F7A00D2441D"
+            BlueprintIdentifier = "14BD4FBE1EE847A0000218B7"
             BuildableName = "ImageCache.framework"
             BlueprintName = "ImageCache"
             ReferencedContainer = "container:ImageCache.xcodeproj">

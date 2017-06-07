@@ -5,7 +5,7 @@
       location = "group:ImageCache.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/sean/Development/ImageCache/SampleProject.xcodeproj">
+      location = "group:SampleProject.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
