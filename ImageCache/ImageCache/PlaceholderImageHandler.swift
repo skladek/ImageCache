@@ -17,17 +17,15 @@ protocol ImageHandling {
 
 class PlaceholderImageHandler: ImageHandling {
 
-
     // MARK: Internal Methods
 
-    
     func dissolveToImage(_ image: UIImage, onView view: UIImageView) {
         UIView.transition(with: view, duration: 0.3, options: .transitionCrossDissolve, animations: {
             self.setImage(image, onView: view)
         }, completion: nil)
     }
 
-    func image(_ url: URL?, imageCache: ImageCache, completion: @escaping (UIImage?, Bool, Error?) -> ()) -> URLSessionDataTask? {
+    func image(_ url: URL?, imageCache: ImageCache, completion: @escaping ImageCache.ImageCompletion) -> URLSessionDataTask? {
         guard let url = url else {
             return nil
         }

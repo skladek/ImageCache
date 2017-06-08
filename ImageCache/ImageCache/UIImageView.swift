@@ -8,9 +8,7 @@
 
 public extension UIImageView {
 
-
     // MARK: Public Methods
-
 
     /// Sets the image on the image view to the placeholder image and then later to an image from the cache
     /// or remote source once it has been retrieved.
@@ -29,12 +27,12 @@ public extension UIImageView {
     internal func setImageFromURL(_ url: URL?, placeholderImageName: String?, imageCache: ImageCache, imageHandler: ImageHandling) -> URLSessionDataTask? {
         self.image = imageHandler.placeholderImage(placeholderImageName, bundle: nil)
 
-        return imageHandler.image(url, imageCache: imageCache, completion: { (image, fromCache, error) in
+        return imageHandler.image(url, imageCache: imageCache, completion: { (image, fromCache, _) in
             self.imageCompletion(image: image, fromCache: fromCache, imageHandler: imageHandler)
         })
     }
 
-    internal func imageCompletion(image: UIImage?, fromCache: Bool, imageHandler: ImageHandling) -> () {
+    internal func imageCompletion(image: UIImage?, fromCache: Bool, imageHandler: ImageHandling) {
         guard let image = image else {
             return
         }

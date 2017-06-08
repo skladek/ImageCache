@@ -6,46 +6,36 @@
 //  Copyright © 2017 Sean Kladek. All rights reserved.
 //
 
-public protocol ImageCacheDelegate {
+public protocol ImageCacheDelegate: class {
     func loadImageAtURL(_ url: URL, completion: @escaping ImageCache.RemoteImageCompletion) -> URLSessionDataTask?
 }
 
 /// An object to handle caching of images using their remote URL as the key for retrieval.
 public class ImageCache {
 
-
     // MARK: Class Types
 
-
     /// A closure providing an optional image, boolean indicating true if the image was retrieved from the cache, and error.
-    public typealias ImageCompletion = (UIImage?, Bool, Error?) -> ()
+    public typealias ImageCompletion = (UIImage?, Bool, Error?) -> Void
 
     /// A closure to be returned by a remote source providing an optional image and error.
-    public typealias RemoteImageCompletion = (UIImage?, Error?) -> ()
-
+    public typealias RemoteImageCompletion = (UIImage?, Error?) -> Void
 
     // MARK: Class Variables
 
-    
     /// A singleton instance of the cache.
     public static let shared = ImageCache()
 
-
     // MARK: Public Variables
 
-
     /// The object responding to delegate events.
-    public var delegate: ImageCacheDelegate?
-
+    public weak var delegate: ImageCacheDelegate?
 
     // MARK: Internal Variables
 
-
     let cache: NSCache<AnyObject, UIImage>
 
-
     // MARK: Init Methods
-
 
     init() {
         self.cache = NSCache<AnyObject, UIImage>()
@@ -55,9 +45,7 @@ public class ImageCache {
         self.cache = cache
     }
 
-
     // MARK: Public Methods
-
 
     /// Adds the provided image to the cache using the url as the key.
     ///
@@ -105,9 +93,7 @@ public class ImageCache {
         cache.removeObject(forKey: imageName)
     }
 
-
     // MARK: Private Methods
-
 
     private func imageNameFromURL(_ url: URL) -> AnyObject {
         return url.lastPathComponent as AnyObject
