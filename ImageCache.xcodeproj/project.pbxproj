@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1433BE211EE8ADAD005D54B3 /* UIImageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433BE201EE8ADAD005D54B3 /* UIImageViewSpec.swift */; };
+		1433BE251EE8B3E4005D54B3 /* PlaceholderImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433BE241EE8B3E4005D54B3 /* PlaceholderImageHandler.swift */; };
+		1433BE271EE8BA9F005D54B3 /* MockImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433BE261EE8BA9F005D54B3 /* MockImageHandler.swift */; };
+		1433BE291EE8BC26005D54B3 /* MockImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433BE281EE8BC26005D54B3 /* MockImageCache.swift */; };
+		1433BE2B1EE8F287005D54B3 /* PlaceholderImageHandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433BE2A1EE8F287005D54B3 /* PlaceholderImageHandlerSpec.swift */; };
 		143BDB5B1EE848C70080C9EA /* ImageCacheSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BDB561EE848C70080C9EA /* ImageCacheSpec.swift */; };
 		143BDB5C1EE848C70080C9EA /* MockImageCacheDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BDB581EE848C70080C9EA /* MockImageCacheDelegate.swift */; };
 		143BDB5D1EE848C70080C9EA /* MockNSCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BDB591EE848C70080C9EA /* MockNSCache.swift */; };
@@ -29,6 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1433BE201EE8ADAD005D54B3 /* UIImageViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewSpec.swift; sourceTree = "<group>"; };
+		1433BE241EE8B3E4005D54B3 /* PlaceholderImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderImageHandler.swift; sourceTree = "<group>"; };
+		1433BE261EE8BA9F005D54B3 /* MockImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageHandler.swift; sourceTree = "<group>"; };
+		1433BE281EE8BC26005D54B3 /* MockImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageCache.swift; sourceTree = "<group>"; };
+		1433BE2A1EE8F287005D54B3 /* PlaceholderImageHandlerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderImageHandlerSpec.swift; sourceTree = "<group>"; };
 		143BDB561EE848C70080C9EA /* ImageCacheSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheSpec.swift; sourceTree = "<group>"; };
 		143BDB581EE848C70080C9EA /* MockImageCacheDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageCacheDelegate.swift; sourceTree = "<group>"; };
 		143BDB591EE848C70080C9EA /* MockNSCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNSCache.swift; sourceTree = "<group>"; };
@@ -86,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				143BDB561EE848C70080C9EA /* ImageCacheSpec.swift */,
+				1433BE2A1EE8F287005D54B3 /* PlaceholderImageHandlerSpec.swift */,
+				1433BE201EE8ADAD005D54B3 /* UIImageViewSpec.swift */,
 			);
 			path = ImageCache;
 			sourceTree = "<group>";
@@ -93,7 +105,9 @@
 		143BDB571EE848C70080C9EA /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				1433BE281EE8BC26005D54B3 /* MockImageCache.swift */,
 				143BDB581EE848C70080C9EA /* MockImageCacheDelegate.swift */,
+				1433BE261EE8BA9F005D54B3 /* MockImageHandler.swift */,
 				143BDB591EE848C70080C9EA /* MockNSCache.swift */,
 				143BDB5A1EE848C70080C9EA /* testimage.png */,
 			);
@@ -104,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				143BDB601EE848D30080C9EA /* ImageCache.swift */,
+				1433BE241EE8B3E4005D54B3 /* PlaceholderImageHandler.swift */,
 				14F7D0341EE8A7D200C232AB /* UIImageView.swift */,
 			);
 			path = ImageCache;
@@ -323,6 +338,7 @@
 			files = (
 				14F7D0351EE8A7D200C232AB /* UIImageView.swift in Sources */,
 				143BDB611EE848D30080C9EA /* ImageCache.swift in Sources */,
+				1433BE251EE8B3E4005D54B3 /* PlaceholderImageHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +349,10 @@
 				143BDB5B1EE848C70080C9EA /* ImageCacheSpec.swift in Sources */,
 				143BDB5C1EE848C70080C9EA /* MockImageCacheDelegate.swift in Sources */,
 				143BDB5D1EE848C70080C9EA /* MockNSCache.swift in Sources */,
+				1433BE271EE8BA9F005D54B3 /* MockImageHandler.swift in Sources */,
+				1433BE291EE8BC26005D54B3 /* MockImageCache.swift in Sources */,
+				1433BE211EE8ADAD005D54B3 /* UIImageViewSpec.swift in Sources */,
+				1433BE2B1EE8F287005D54B3 /* PlaceholderImageHandlerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

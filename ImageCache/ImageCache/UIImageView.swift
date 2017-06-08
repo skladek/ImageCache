@@ -7,34 +7,32 @@
 //
 
 public extension UIImageView {
-    func setImageFromURL(_ url: URL, imageCache: ImageCache = ImageCache.shared) -> URLSessionDataTask? {
-        return imageCache.getImage(url: url, completion: { (image, fromCache, error) in
-            guard let image = image else {
-                return
-            }
+    // MARK: Public Methods
 
-            if fromCache == true {
-                self.image = image
-            } else {
-                UIView.transition(with: self, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                    self.image = image
-                }, completion: nil)
-            }
+    @discardableResult
+    public func setImageFromURL(_ url: URL?, placeholderImageName: String?) -> URLSessionDataTask? {
+        return setImageFromURL(url, placeholderImageName: placeholderImageName, imageCache: ImageCache.shared, imageHandler: PlaceholderImageHandler())
+    }
+
+    // MARK: Internal Methods
+
+    internal func setImageFromURL(_ url: URL?, placeholderImageName: String?, imageCache: ImageCache, imageHandler: ImageHandling) -> URLSessionDataTask? {
+        self.image = imageHandler.placeholderImage(placeholderImageName, bundle: nil)
+
+        return imageHandler.image(url, imageCache: imageCache, completion: { (image, fromCache, error) in
+            self.imageCompletion(image: image, fromCache: fromCache, imageHandler: imageHandler)
         })
     }
 
-    public func setImageFromURL(_ url: URL?, placeholderImageName: String?) -> URLSessionDataTask? {
-        var placeholderImage: UIImage? = nil
-
-        if let imageName = placeholderImageName {
-            placeholderImage = UIImage(named: imageName)
-        }
-        self.image = placeholderImage
-
-        guard let url = url else {
-            return nil
+    internal func imageCompletion(image: UIImage?, fromCache: Bool, imageHandler: ImageHandling) -> () {
+        guard let image = image else {
+            return
         }
 
-        return setImageFromURL(url)
+        if fromCache == true {
+            imageHandler.setImage(image, onView: self)
+        } else {
+            imageHandler.dissolveToImage(image, onView: self)
+        }
     }
 }
