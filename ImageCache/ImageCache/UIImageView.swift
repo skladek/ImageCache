@@ -7,8 +7,18 @@
 //
 
 public extension UIImageView {
+
+
     // MARK: Public Methods
 
+
+    /// Sets the image on the image view to the placeholder image and then later to an image from the cache
+    /// or remote source once it has been retrieved.
+    ///
+    /// - Parameters:
+    ///   - url: The URL of the final image.
+    ///   - placeholderImageName: The name of the placeholder image. Setting this to nil will set image to nil.
+    /// - Returns: The URLSessionDataTask if a retrieval from the remote source is necessary.
     @discardableResult
     public func setImageFromURL(_ url: URL?, placeholderImageName: String?) -> URLSessionDataTask? {
         return setImageFromURL(url, placeholderImageName: placeholderImageName, imageCache: ImageCache.shared, imageHandler: PlaceholderImageHandler())

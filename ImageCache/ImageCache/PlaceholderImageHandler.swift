@@ -16,6 +16,11 @@ protocol ImageHandling {
 }
 
 class PlaceholderImageHandler: ImageHandling {
+
+
+    // MARK: Internal Methods
+
+    
     func dissolveToImage(_ image: UIImage, onView view: UIImageView) {
         UIView.transition(with: view, duration: 0.3, options: .transitionCrossDissolve, animations: {
             self.setImage(image, onView: view)

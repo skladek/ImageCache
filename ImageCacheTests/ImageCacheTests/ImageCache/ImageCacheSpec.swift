@@ -77,6 +77,16 @@ class ImageCacheSpec: QuickSpec {
                     })
                 }
 
+                it("Should not return a value from the cache if skipCache is set to true.") {
+                    mockNSCache.shouldReturnImage = true
+                    waitUntil { done in
+                        let _ = unitUnderTest.getImage(url: url, skipCache: true, completion: { (_, fromCache, _) in
+                            expect(fromCache).to(beFalse())
+                            done()
+                        })
+                    }
+                }
+
                 it("Should call loadURL on the delegate if one is set") {
                     mockNSCache.shouldReturnImage = false
                     let _ = unitUnderTest.getImage(url: url, completion: { (_, fromCache, _) in })
