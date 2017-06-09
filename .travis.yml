@@ -1,5 +1,5 @@
 language: swift
 osx_image: xcode8.3
 script: fastlane test
-xcode_project: ImageCache.xcodeproj
-xcode_scheme: ImageCache
+xcode_project: SKImageCache.xcodeproj
+xcode_scheme: SKImageCache

@@ -1,3 +1,3 @@
-# ImageCache
+# SKImageCache
 
-![Travis Status](https://travis-ci.org/skladek/ImageCache.svg?branch=master)
+![Travis Status](https://travis-ci.org/skladek/SKImageCache.svg?branch=master)

@@ -8,7 +8,7 @@ lane :test do
   )
 
   scan(
-    scheme: "ImageCache",
-    workspace: "ImageCache.xcworkspace"
+    scheme: "SKImageCache",
+    workspace: "SKImageCache.xcworkspace"
   )
 end
