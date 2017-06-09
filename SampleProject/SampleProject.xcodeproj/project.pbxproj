@@ -27,16 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1431B9241EEB161C00D767DA /* PBXContainerItemProxy */ = {
+		144C79261EEB1875009311D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1431B91F1EEB161C00D767DA /* SKImageCache.xcodeproj */;
+			containerPortal = 144C79211EEB1875009311D0 /* SKImageCache.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1431B8DC1EEB154F00D767DA;
 			remoteInfo = SKImageCache;
 		};
-		1431B9261EEB161C00D767DA /* PBXContainerItemProxy */ = {
+		144C79281EEB1875009311D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1431B91F1EEB161C00D767DA /* SKImageCache.xcodeproj */;
+			containerPortal = 144C79211EEB1875009311D0 /* SKImageCache.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1431B8E51EEB154F00D767DA;
 			remoteInfo = SKImageCacheTests;
@@ -44,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1431B91F1EEB161C00D767DA /* SKImageCache.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SKImageCache.xcodeproj; sourceTree = "<group>"; };
+		144C79211EEB1875009311D0 /* SKImageCache.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SKImageCache.xcodeproj; path = ../SKImageCache.xcodeproj; sourceTree = "<group>"; };
 		147FBC781EE74F6500D2441D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		147FBC791EE74F6500D2441D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		147FBC7B1EE74F6500D2441D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,11 +81,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1431B9201EEB161C00D767DA /* Products */ = {
+		144C79221EEB1875009311D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1431B9251EEB161C00D767DA /* SKImageCache.framework */,
-				1431B9271EEB161C00D767DA /* SKImageCacheTests.xctest */,
+				144C79271EEB1875009311D0 /* SKImageCache.framework */,
+				144C79291EEB1875009311D0 /* SKImageCacheTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 				14D90F071EDF5220002D0ABA /* Products */,
 				AC036E922A219E7DF2DE4B7B /* Pods */,
 				CFDEA3FC56B60E0065292B09 /* Frameworks */,
-				1431B91F1EEB161C00D767DA /* SKImageCache.xcodeproj */,
+				144C79211EEB1875009311D0 /* SKImageCache.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,8 +258,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 1431B9201EEB161C00D767DA /* Products */;
-					ProjectRef = 1431B91F1EEB161C00D767DA /* SKImageCache.xcodeproj */;
+					ProductGroup = 144C79221EEB1875009311D0 /* Products */;
+					ProjectRef = 144C79211EEB1875009311D0 /* SKImageCache.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -270,18 +270,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		1431B9251EEB161C00D767DA /* SKImageCache.framework */ = {
+		144C79271EEB1875009311D0 /* SKImageCache.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SKImageCache.framework;
-			remoteRef = 1431B9241EEB161C00D767DA /* PBXContainerItemProxy */;
+			remoteRef = 144C79261EEB1875009311D0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1431B9271EEB161C00D767DA /* SKImageCacheTests.xctest */ = {
+		144C79291EEB1875009311D0 /* SKImageCacheTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SKImageCacheTests.xctest;
-			remoteRef = 1431B9261EEB161C00D767DA /* PBXContainerItemProxy */;
+			remoteRef = 144C79281EEB1875009311D0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
