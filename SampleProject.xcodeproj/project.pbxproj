@@ -27,23 +27,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		147FBCD01EE74FB000D2441D /* PBXContainerItemProxy */ = {
+		1431B8CC1EEB12F500D767DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 147FBCCB1EE74FB000D2441D /* ImageCache.xcodeproj */;
+			containerPortal = 1431B8C71EEB12F500D767DA /* SKImageCache.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 147FBCB11EE74F7A00D2441D;
-			remoteInfo = ImageCache;
+			remoteGlobalIDString = 14BD4FBF1EE847A0000218B7;
+			remoteInfo = SKImageCache;
 		};
-		147FBCD21EE74FB000D2441D /* PBXContainerItemProxy */ = {
+		1431B8CE1EEB12F500D767DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 147FBCCB1EE74FB000D2441D /* ImageCache.xcodeproj */;
+			containerPortal = 1431B8C71EEB12F500D767DA /* SKImageCache.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 147FBCBA1EE74F7A00D2441D;
-			remoteInfo = ImageCacheTests;
+			remoteGlobalIDString = 14BD4FC81EE847A0000218B7;
+			remoteInfo = SKImageCacheTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1431B8C71EEB12F500D767DA /* SKImageCache.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SKImageCache.xcodeproj; sourceTree = "<group>"; };
 		147FBC781EE74F6500D2441D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		147FBC791EE74F6500D2441D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		147FBC7B1EE74F6500D2441D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		147FBC901EE74F6500D2441D /* ImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		147FBC921EE74F6500D2441D /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		147FBC931EE74F6500D2441D /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
-		147FBCCB1EE74FB000D2441D /* ImageCache.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ImageCache.xcodeproj; sourceTree = "<group>"; };
 		14D90F061EDF5220002D0ABA /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A20A6B5AC1DF9353FD00762 /* Pods_ImageCacheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCacheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76169D9676D6DE4ACAA583C3 /* Pods-ImageCacheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCacheTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1431B8C81EEB12F500D767DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1431B8CD1EEB12F500D767DA /* SKImageCache.framework */,
+				1431B8CF1EEB12F500D767DA /* SKImageCacheTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		147FBC761EE74F6500D2441D /* SampleProject */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,15 +172,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		147FBCCC1EE74FB000D2441D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				147FBCD11EE74FB000D2441D /* ImageCache.framework */,
-				147FBCD31EE74FB000D2441D /* ImageCacheTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		14D90EFD1EDF5220002D0ABA = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +179,7 @@
 				14D90F071EDF5220002D0ABA /* Products */,
 				AC036E922A219E7DF2DE4B7B /* Pods */,
 				CFDEA3FC56B60E0065292B09 /* Frameworks */,
-				147FBCCB1EE74FB000D2441D /* ImageCache.xcodeproj */,
+				1431B8C71EEB12F500D767DA /* SKImageCache.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,8 +258,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 147FBCCC1EE74FB000D2441D /* Products */;
-					ProjectRef = 147FBCCB1EE74FB000D2441D /* ImageCache.xcodeproj */;
+					ProductGroup = 1431B8C81EEB12F500D767DA /* Products */;
+					ProjectRef = 1431B8C71EEB12F500D767DA /* SKImageCache.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -270,18 +270,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		147FBCD11EE74FB000D2441D /* ImageCache.framework */ = {
+		1431B8CD1EEB12F500D767DA /* SKImageCache.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = ImageCache.framework;
-			remoteRef = 147FBCD01EE74FB000D2441D /* PBXContainerItemProxy */;
+			path = SKImageCache.framework;
+			remoteRef = 1431B8CC1EEB12F500D767DA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		147FBCD31EE74FB000D2441D /* ImageCacheTests.xctest */ = {
+		1431B8CF1EEB12F500D767DA /* SKImageCacheTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = ImageCacheTests.xctest;
-			remoteRef = 147FBCD21EE74FB000D2441D /* PBXContainerItemProxy */;
+			path = SKImageCacheTests.xctest;
+			remoteRef = 1431B8CE1EEB12F500D767DA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

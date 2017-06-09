@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-@testable import ImageCache
+@testable import SKImageCache
 
 class MockImageCacheDelegate: ImageCacheDelegate {
     var loadImageAtURLCalled = false

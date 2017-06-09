@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ImageHandling {
     func dissolveToImage(_ image: UIImage, onView view: UIImageView)

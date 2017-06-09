@@ -6,6 +6,8 @@
 //  Copyright © 2017 Sean Kladek. All rights reserved.
 //
 
+import UIKit
+
 public extension UIImageView {
 
     // MARK: Public Methods

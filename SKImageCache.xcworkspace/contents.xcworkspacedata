@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ImageCache.xcodeproj">
+      location = "group:/Users/sean/Development/SKImageCache/SKImageCache.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:SampleProject.xcodeproj">

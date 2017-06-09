@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "14BD4FBE1EE847A0000218B7"
-               BuildableName = "ImageCache.framework"
-               BlueprintName = "ImageCache"
-               ReferencedContainer = "container:ImageCache.xcodeproj">
+               BuildableName = "SKImageCache.framework"
+               BlueprintName = "SKImageCache"
+               ReferencedContainer = "container:SKImageCache.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "14BD4FC71EE847A0000218B7"
-               BuildableName = "ImageCacheTests.xctest"
-               BlueprintName = "ImageCacheTests"
-               ReferencedContainer = "container:ImageCache.xcodeproj">
+               BuildableName = "SKImageCacheTests.xctest"
+               BlueprintName = "SKImageCacheTests"
+               ReferencedContainer = "container:SKImageCache.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14BD4FBE1EE847A0000218B7"
-            BuildableName = "ImageCache.framework"
-            BlueprintName = "ImageCache"
-            ReferencedContainer = "container:ImageCache.xcodeproj">
+            BuildableName = "SKImageCache.framework"
+            BlueprintName = "SKImageCache"
+            ReferencedContainer = "container:SKImageCache.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14BD4FBE1EE847A0000218B7"
-            BuildableName = "ImageCache.framework"
-            BlueprintName = "ImageCache"
-            ReferencedContainer = "container:ImageCache.xcodeproj">
+            BuildableName = "SKImageCache.framework"
+            BlueprintName = "SKImageCache"
+            ReferencedContainer = "container:SKImageCache.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -84,9 +84,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14BD4FBE1EE847A0000218B7"
-            BuildableName = "ImageCache.framework"
-            BlueprintName = "ImageCache"
-            ReferencedContainer = "container:ImageCache.xcodeproj">
+            BuildableName = "SKImageCache.framework"
+            BlueprintName = "SKImageCache"
+            ReferencedContainer = "container:SKImageCache.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

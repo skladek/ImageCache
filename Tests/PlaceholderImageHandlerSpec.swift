@@ -10,7 +10,7 @@ import Foundation
 import Nimble
 import Quick
 
-@testable import ImageCache
+@testable import SKImageCache
 
 class PlaceholderImageHandlerSpec: QuickSpec {
     override func spec() {

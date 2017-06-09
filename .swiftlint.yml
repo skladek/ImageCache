@@ -1,8 +1,7 @@
 included:
-  - ImageCache
+  - Source
 
 excluded:
-  - Carthage
   - Pods
 
 disabled_rules:

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_ImageCacheVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_ImageCacheVersionString[];
+FOUNDATION_EXPORT double Pods_SKImageCacheTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SKImageCacheTestsVersionString[];
 

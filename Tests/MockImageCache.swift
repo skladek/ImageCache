@@ -8,7 +8,7 @@
 
 import Foundation
 
-@testable import ImageCache
+@testable import SKImageCache
 
 class MockImageCache: ImageCache {
     var getImageCalled = false

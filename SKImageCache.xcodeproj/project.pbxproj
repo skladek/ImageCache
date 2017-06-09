@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		019C0F4160F5B12BC721AED0 /* Pods_ImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81167D5FD5BAA60A8376333C /* Pods_ImageCache.framework */; };
-		1433BE211EE8ADAD005D54B3 /* UIImageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433BE201EE8ADAD005D54B3 /* UIImageViewSpec.swift */; };
-		1433BE251EE8B3E4005D54B3 /* PlaceholderImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433BE241EE8B3E4005D54B3 /* PlaceholderImageHandler.swift */; };
-		1433BE271EE8BA9F005D54B3 /* MockImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433BE261EE8BA9F005D54B3 /* MockImageHandler.swift */; };
-		1433BE291EE8BC26005D54B3 /* MockImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433BE281EE8BC26005D54B3 /* MockImageCache.swift */; };
-		1433BE2B1EE8F287005D54B3 /* PlaceholderImageHandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1433BE2A1EE8F287005D54B3 /* PlaceholderImageHandlerSpec.swift */; };
-		143BDB5B1EE848C70080C9EA /* ImageCacheSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BDB561EE848C70080C9EA /* ImageCacheSpec.swift */; };
-		143BDB5C1EE848C70080C9EA /* MockImageCacheDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BDB581EE848C70080C9EA /* MockImageCacheDelegate.swift */; };
-		143BDB5D1EE848C70080C9EA /* MockNSCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BDB591EE848C70080C9EA /* MockNSCache.swift */; };
-		143BDB5E1EE848C70080C9EA /* testimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 143BDB5A1EE848C70080C9EA /* testimage.png */; };
-		143BDB611EE848D30080C9EA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BDB601EE848D30080C9EA /* ImageCache.swift */; };
-		14BD4FC91EE847A0000218B7 /* ImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BD4FBF1EE847A0000218B7 /* ImageCache.framework */; };
-		14BD4FD01EE847A0000218B7 /* ImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 14BD4FC21EE847A0000218B7 /* ImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14F7D0351EE8A7D200C232AB /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7D0341EE8A7D200C232AB /* UIImageView.swift */; };
-		F13F43F97204760D728291D3 /* Pods_ImageCacheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06399296DB1BAB80C91C550 /* Pods_ImageCacheTests.framework */; };
+		1431B8AF1EEB129000D767DA /* ImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1431B89F1EEB129000D767DA /* ImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1431B8B01EEB129000D767DA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8A01EEB129000D767DA /* ImageCache.swift */; };
+		1431B8B21EEB129000D767DA /* PlaceholderImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8A21EEB129000D767DA /* PlaceholderImageHandler.swift */; };
+		1431B8B31EEB129000D767DA /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8A31EEB129000D767DA /* UIImageView.swift */; };
+		1431B8BD1EEB12A000D767DA /* ImageCacheSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8A51EEB129000D767DA /* ImageCacheSpec.swift */; };
+		1431B8BE1EEB12A000D767DA /* MockImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8A81EEB129000D767DA /* MockImageCache.swift */; };
+		1431B8BF1EEB12A000D767DA /* MockImageCacheDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8A91EEB129000D767DA /* MockImageCacheDelegate.swift */; };
+		1431B8C01EEB12A000D767DA /* MockImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8AA1EEB129000D767DA /* MockImageHandler.swift */; };
+		1431B8C11EEB12A000D767DA /* MockNSCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8AB1EEB129000D767DA /* MockNSCache.swift */; };
+		1431B8C21EEB12A000D767DA /* PlaceholderImageHandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8AC1EEB129000D767DA /* PlaceholderImageHandlerSpec.swift */; };
+		1431B8C31EEB12A000D767DA /* testimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 1431B8AD1EEB129000D767DA /* testimage.png */; };
+		1431B8C41EEB12A000D767DA /* UIImageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8AE1EEB129000D767DA /* UIImageViewSpec.swift */; };
+		14BD4FC91EE847A0000218B7 /* SKImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BD4FBF1EE847A0000218B7 /* SKImageCache.framework */; };
+		332208AABF812D2B00A95B4C /* Pods_SKImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81863F5CE8438D11DDD82C17 /* Pods_SKImageCache.framework */; };
+		79ED3EA21E8CC0FD690ECED8 /* Pods_SKImageCacheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BDE74515CDF3BE3FC5155 /* Pods_SKImageCacheTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,28 +35,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1433BE201EE8ADAD005D54B3 /* UIImageViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewSpec.swift; sourceTree = "<group>"; };
-		1433BE241EE8B3E4005D54B3 /* PlaceholderImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderImageHandler.swift; sourceTree = "<group>"; };
-		1433BE261EE8BA9F005D54B3 /* MockImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageHandler.swift; sourceTree = "<group>"; };
-		1433BE281EE8BC26005D54B3 /* MockImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageCache.swift; sourceTree = "<group>"; };
-		1433BE2A1EE8F287005D54B3 /* PlaceholderImageHandlerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderImageHandlerSpec.swift; sourceTree = "<group>"; };
-		143BDB561EE848C70080C9EA /* ImageCacheSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheSpec.swift; sourceTree = "<group>"; };
-		143BDB581EE848C70080C9EA /* MockImageCacheDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageCacheDelegate.swift; sourceTree = "<group>"; };
-		143BDB591EE848C70080C9EA /* MockNSCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNSCache.swift; sourceTree = "<group>"; };
-		143BDB5A1EE848C70080C9EA /* testimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testimage.png; sourceTree = "<group>"; };
-		143BDB601EE848D30080C9EA /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		14BD4FBF1EE847A0000218B7 /* ImageCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		14BD4FC21EE847A0000218B7 /* ImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
-		14BD4FC31EE847A0000218B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14BD4FC81EE847A0000218B7 /* ImageCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14BD4FCF1EE847A0000218B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14F7D0341EE8A7D200C232AB /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		81167D5FD5BAA60A8376333C /* Pods_ImageCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		888F3398FE15C89F9EFC57A5 /* Pods-ImageCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCache/Pods-ImageCache.release.xcconfig"; sourceTree = "<group>"; };
-		94F3A083919FCFF4061A210F /* Pods-ImageCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCache/Pods-ImageCache.debug.xcconfig"; sourceTree = "<group>"; };
-		BBA80831AACFB5647EFDD813 /* Pods-ImageCacheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCacheTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests.release.xcconfig"; sourceTree = "<group>"; };
-		C06399296DB1BAB80C91C550 /* Pods_ImageCacheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCacheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBB2F35406C0598CECF0F31C /* Pods-ImageCacheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCacheTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1431B89F1EEB129000D767DA /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		1431B8A01EEB129000D767DA /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		1431B8A11EEB129000D767DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1431B8A21EEB129000D767DA /* PlaceholderImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderImageHandler.swift; sourceTree = "<group>"; };
+		1431B8A31EEB129000D767DA /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		1431B8A51EEB129000D767DA /* ImageCacheSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheSpec.swift; sourceTree = "<group>"; };
+		1431B8A71EEB129000D767DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1431B8A81EEB129000D767DA /* MockImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageCache.swift; sourceTree = "<group>"; };
+		1431B8A91EEB129000D767DA /* MockImageCacheDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageCacheDelegate.swift; sourceTree = "<group>"; };
+		1431B8AA1EEB129000D767DA /* MockImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageHandler.swift; sourceTree = "<group>"; };
+		1431B8AB1EEB129000D767DA /* MockNSCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNSCache.swift; sourceTree = "<group>"; };
+		1431B8AC1EEB129000D767DA /* PlaceholderImageHandlerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderImageHandlerSpec.swift; sourceTree = "<group>"; };
+		1431B8AD1EEB129000D767DA /* testimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testimage.png; sourceTree = "<group>"; };
+		1431B8AE1EEB129000D767DA /* UIImageViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewSpec.swift; sourceTree = "<group>"; };
+		14BD4FBF1EE847A0000218B7 /* SKImageCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SKImageCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14BD4FC81EE847A0000218B7 /* SKImageCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKImageCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B642CDDDB0336EA8CD2193 /* Pods-SKImageCacheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKImageCacheTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKImageCacheTests/Pods-SKImageCacheTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3BA911B98D2FC847015EEE60 /* Pods-SKImageCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKImageCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKImageCache/Pods-SKImageCache.debug.xcconfig"; sourceTree = "<group>"; };
+		436BDE74515CDF3BE3FC5155 /* Pods_SKImageCacheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKImageCacheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AEC47C87843217DA6144F01 /* Pods-SKImageCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKImageCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKImageCache/Pods-SKImageCache.release.xcconfig"; sourceTree = "<group>"; };
+		81863F5CE8438D11DDD82C17 /* Pods_SKImageCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKImageCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F6DEE740B22709F7F1DD54 /* Pods-SKImageCacheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKImageCacheTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKImageCacheTests/Pods-SKImageCacheTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019C0F4160F5B12BC721AED0 /* Pods_ImageCache.framework in Frameworks */,
+				332208AABF812D2B00A95B4C /* Pods_SKImageCache.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,8 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14BD4FC91EE847A0000218B7 /* ImageCache.framework in Frameworks */,
-				F13F43F97204760D728291D3 /* Pods_ImageCacheTests.framework in Frameworks */,
+				14BD4FC91EE847A0000218B7 /* SKImageCache.framework in Frameworks */,
+				79ED3EA21E8CC0FD690ECED8 /* Pods_SKImageCacheTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,99 +83,83 @@
 		03DF5142C3C043CA4A8CFF3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C06399296DB1BAB80C91C550 /* Pods_ImageCacheTests.framework */,
-				81167D5FD5BAA60A8376333C /* Pods_ImageCache.framework */,
+				81863F5CE8438D11DDD82C17 /* Pods_SKImageCache.framework */,
+				436BDE74515CDF3BE3FC5155 /* Pods_SKImageCacheTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		143BDB541EE848C70080C9EA /* ImageCacheTests */ = {
+		1431B89E1EEB129000D767DA /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				143BDB551EE848C70080C9EA /* ImageCache */,
-				143BDB571EE848C70080C9EA /* Mocks */,
+				1431B89F1EEB129000D767DA /* ImageCache.h */,
+				1431B8A01EEB129000D767DA /* ImageCache.swift */,
+				1431B8A11EEB129000D767DA /* Info.plist */,
+				1431B8A21EEB129000D767DA /* PlaceholderImageHandler.swift */,
+				1431B8A31EEB129000D767DA /* UIImageView.swift */,
 			);
-			path = ImageCacheTests;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		143BDB551EE848C70080C9EA /* ImageCache */ = {
+		1431B8A41EEB129000D767DA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				143BDB561EE848C70080C9EA /* ImageCacheSpec.swift */,
-				1433BE2A1EE8F287005D54B3 /* PlaceholderImageHandlerSpec.swift */,
-				1433BE201EE8ADAD005D54B3 /* UIImageViewSpec.swift */,
+				1431B8A71EEB129000D767DA /* Info.plist */,
+				1431B8C51EEB12B400D767DA /* Mocks */,
+				1431B8C61EEB12CA00D767DA /* Source */,
 			);
-			path = ImageCache;
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		143BDB571EE848C70080C9EA /* Mocks */ = {
+		1431B8C51EEB12B400D767DA /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				1433BE281EE8BC26005D54B3 /* MockImageCache.swift */,
-				143BDB581EE848C70080C9EA /* MockImageCacheDelegate.swift */,
-				1433BE261EE8BA9F005D54B3 /* MockImageHandler.swift */,
-				143BDB591EE848C70080C9EA /* MockNSCache.swift */,
-				143BDB5A1EE848C70080C9EA /* testimage.png */,
+				1431B8A81EEB129000D767DA /* MockImageCache.swift */,
+				1431B8A91EEB129000D767DA /* MockImageCacheDelegate.swift */,
+				1431B8AA1EEB129000D767DA /* MockImageHandler.swift */,
+				1431B8AB1EEB129000D767DA /* MockNSCache.swift */,
+				1431B8AD1EEB129000D767DA /* testimage.png */,
 			);
-			path = Mocks;
+			name = Mocks;
 			sourceTree = "<group>";
 		};
-		143BDB5F1EE848D30080C9EA /* ImageCache */ = {
+		1431B8C61EEB12CA00D767DA /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				143BDB601EE848D30080C9EA /* ImageCache.swift */,
-				1433BE241EE8B3E4005D54B3 /* PlaceholderImageHandler.swift */,
-				14F7D0341EE8A7D200C232AB /* UIImageView.swift */,
+				1431B8A51EEB129000D767DA /* ImageCacheSpec.swift */,
+				1431B8AC1EEB129000D767DA /* PlaceholderImageHandlerSpec.swift */,
+				1431B8AE1EEB129000D767DA /* UIImageViewSpec.swift */,
 			);
-			path = ImageCache;
+			name = Source;
 			sourceTree = "<group>";
 		};
 		14BD4FB51EE847A0000218B7 = {
 			isa = PBXGroup;
 			children = (
-				14BD4FC11EE847A0000218B7 /* ImageCache */,
-				14BD4FCC1EE847A0000218B7 /* ImageCacheTests */,
+				1431B89E1EEB129000D767DA /* Source */,
+				1431B8A41EEB129000D767DA /* Tests */,
 				14BD4FC01EE847A0000218B7 /* Products */,
-				8A06FA3B488ABE3EB4D7312F /* Pods */,
 				03DF5142C3C043CA4A8CFF3F /* Frameworks */,
+				D2E5BC4384C3E98FEC22EF51 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		14BD4FC01EE847A0000218B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14BD4FBF1EE847A0000218B7 /* ImageCache.framework */,
-				14BD4FC81EE847A0000218B7 /* ImageCacheTests.xctest */,
+				14BD4FBF1EE847A0000218B7 /* SKImageCache.framework */,
+				14BD4FC81EE847A0000218B7 /* SKImageCacheTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14BD4FC11EE847A0000218B7 /* ImageCache */ = {
+		D2E5BC4384C3E98FEC22EF51 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				143BDB5F1EE848D30080C9EA /* ImageCache */,
-				14BD4FC21EE847A0000218B7 /* ImageCache.h */,
-				14BD4FC31EE847A0000218B7 /* Info.plist */,
-			);
-			path = ImageCache;
-			sourceTree = "<group>";
-		};
-		14BD4FCC1EE847A0000218B7 /* ImageCacheTests */ = {
-			isa = PBXGroup;
-			children = (
-				143BDB541EE848C70080C9EA /* ImageCacheTests */,
-				14BD4FCF1EE847A0000218B7 /* Info.plist */,
-			);
-			path = ImageCacheTests;
-			sourceTree = "<group>";
-		};
-		8A06FA3B488ABE3EB4D7312F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DBB2F35406C0598CECF0F31C /* Pods-ImageCacheTests.debug.xcconfig */,
-				BBA80831AACFB5647EFDD813 /* Pods-ImageCacheTests.release.xcconfig */,
-				94F3A083919FCFF4061A210F /* Pods-ImageCache.debug.xcconfig */,
-				888F3398FE15C89F9EFC57A5 /* Pods-ImageCache.release.xcconfig */,
+				3BA911B98D2FC847015EEE60 /* Pods-SKImageCache.debug.xcconfig */,
+				4AEC47C87843217DA6144F01 /* Pods-SKImageCache.release.xcconfig */,
+				23B642CDDDB0336EA8CD2193 /* Pods-SKImageCacheTests.debug.xcconfig */,
+				85F6DEE740B22709F7F1DD54 /* Pods-SKImageCacheTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -187,53 +171,53 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14BD4FD01EE847A0000218B7 /* ImageCache.h in Headers */,
+				1431B8AF1EEB129000D767DA /* ImageCache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		14BD4FBE1EE847A0000218B7 /* ImageCache */ = {
+		14BD4FBE1EE847A0000218B7 /* SKImageCache */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14BD4FD31EE847A0000218B7 /* Build configuration list for PBXNativeTarget "ImageCache" */;
+			buildConfigurationList = 14BD4FD31EE847A0000218B7 /* Build configuration list for PBXNativeTarget "SKImageCache" */;
 			buildPhases = (
-				5F6957333EAD39F6CD26F33E /* [CP] Check Pods Manifest.lock */,
+				CDAADC2694928F0A68C0FDC8 /* [CP] Check Pods Manifest.lock */,
 				14BD4FBA1EE847A0000218B7 /* Sources */,
 				14BD4FBB1EE847A0000218B7 /* Frameworks */,
 				14BD4FBC1EE847A0000218B7 /* Headers */,
 				14BD4FBD1EE847A0000218B7 /* Resources */,
-				A618356D831DF873585B758B /* [CP] Copy Pods Resources */,
 				14714AF71EE9086C00178DEC /* SwiftLint */,
+				89B03C3687DB153119C81013 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ImageCache;
+			name = SKImageCache;
 			productName = ImageCache;
-			productReference = 14BD4FBF1EE847A0000218B7 /* ImageCache.framework */;
+			productReference = 14BD4FBF1EE847A0000218B7 /* SKImageCache.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		14BD4FC71EE847A0000218B7 /* ImageCacheTests */ = {
+		14BD4FC71EE847A0000218B7 /* SKImageCacheTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14BD4FD61EE847A0000218B7 /* Build configuration list for PBXNativeTarget "ImageCacheTests" */;
+			buildConfigurationList = 14BD4FD61EE847A0000218B7 /* Build configuration list for PBXNativeTarget "SKImageCacheTests" */;
 			buildPhases = (
 				E1B743E83C58033D98B1D346 /* [CP] Check Pods Manifest.lock */,
 				14BD4FC41EE847A0000218B7 /* Sources */,
 				14BD4FC51EE847A0000218B7 /* Frameworks */,
 				14BD4FC61EE847A0000218B7 /* Resources */,
-				41A016A7E02F6B0E645BBBD5 /* [CP] Embed Pods Frameworks */,
-				A8BF23154537AA3003CA74A3 /* [CP] Copy Pods Resources */,
+				0618EB02AC3F817E0117B3B4 /* [CP] Embed Pods Frameworks */,
+				90FD36BE6A4C2B4E0612930F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				14BD4FCB1EE847A0000218B7 /* PBXTargetDependency */,
 			);
-			name = ImageCacheTests;
+			name = SKImageCacheTests;
 			productName = ImageCacheTests;
-			productReference = 14BD4FC81EE847A0000218B7 /* ImageCacheTests.xctest */;
+			productReference = 14BD4FC81EE847A0000218B7 /* SKImageCacheTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -258,7 +242,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 14BD4FB91EE847A0000218B7 /* Build configuration list for PBXProject "ImageCache" */;
+			buildConfigurationList = 14BD4FB91EE847A0000218B7 /* Build configuration list for PBXProject "SKImageCache" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -270,8 +254,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14BD4FBE1EE847A0000218B7 /* ImageCache */,
-				14BD4FC71EE847A0000218B7 /* ImageCacheTests */,
+				14BD4FBE1EE847A0000218B7 /* SKImageCache */,
+				14BD4FC71EE847A0000218B7 /* SKImageCacheTests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,13 +272,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				143BDB5E1EE848C70080C9EA /* testimage.png in Resources */,
+				1431B8C31EEB12A000D767DA /* testimage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0618EB02AC3F817E0117B3B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKImageCacheTests/Pods-SKImageCacheTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		14714AF71EE9086C00178DEC /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,22 +308,37 @@
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
 		};
-		41A016A7E02F6B0E645BBBD5 /* [CP] Embed Pods Frameworks */ = {
+		89B03C3687DB153119C81013 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKImageCache/Pods-SKImageCache-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5F6957333EAD39F6CD26F33E /* [CP] Check Pods Manifest.lock */ = {
+		90FD36BE6A4C2B4E0612930F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKImageCacheTests/Pods-SKImageCacheTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDAADC2694928F0A68C0FDC8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,36 +351,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A618356D831DF873585B758B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageCache/Pods-ImageCache-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A8BF23154537AA3003CA74A3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageCacheTests/Pods-ImageCacheTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E1B743E83C58033D98B1D346 /* [CP] Check Pods Manifest.lock */ = {
@@ -391,9 +375,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F7D0351EE8A7D200C232AB /* UIImageView.swift in Sources */,
-				143BDB611EE848D30080C9EA /* ImageCache.swift in Sources */,
-				1433BE251EE8B3E4005D54B3 /* PlaceholderImageHandler.swift in Sources */,
+				1431B8B21EEB129000D767DA /* PlaceholderImageHandler.swift in Sources */,
+				1431B8B31EEB129000D767DA /* UIImageView.swift in Sources */,
+				1431B8B01EEB129000D767DA /* ImageCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,13 +385,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				143BDB5B1EE848C70080C9EA /* ImageCacheSpec.swift in Sources */,
-				143BDB5C1EE848C70080C9EA /* MockImageCacheDelegate.swift in Sources */,
-				143BDB5D1EE848C70080C9EA /* MockNSCache.swift in Sources */,
-				1433BE271EE8BA9F005D54B3 /* MockImageHandler.swift in Sources */,
-				1433BE291EE8BC26005D54B3 /* MockImageCache.swift in Sources */,
-				1433BE211EE8ADAD005D54B3 /* UIImageViewSpec.swift in Sources */,
-				1433BE2B1EE8F287005D54B3 /* PlaceholderImageHandlerSpec.swift in Sources */,
+				1431B8C01EEB12A000D767DA /* MockImageHandler.swift in Sources */,
+				1431B8BE1EEB12A000D767DA /* MockImageCache.swift in Sources */,
+				1431B8BD1EEB12A000D767DA /* ImageCacheSpec.swift in Sources */,
+				1431B8C41EEB12A000D767DA /* UIImageViewSpec.swift in Sources */,
+				1431B8C11EEB12A000D767DA /* MockNSCache.swift in Sources */,
+				1431B8BF1EEB12A000D767DA /* MockImageCacheDelegate.swift in Sources */,
+				1431B8C21EEB12A000D767DA /* PlaceholderImageHandlerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +400,7 @@
 /* Begin PBXTargetDependency section */
 		14BD4FCB1EE847A0000218B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14BD4FBE1EE847A0000218B7 /* ImageCache */;
+			target = 14BD4FBE1EE847A0000218B7 /* SKImageCache */;
 			targetProxy = 14BD4FCA1EE847A0000218B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -525,7 +509,7 @@
 		};
 		14BD4FD41EE847A0000218B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94F3A083919FCFF4061A210F /* Pods-ImageCache.debug.xcconfig */;
+			baseConfigurationReference = 3BA911B98D2FC847015EEE60 /* Pods-SKImageCache.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -533,7 +517,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ImageCache/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.ImageCache;
@@ -545,7 +529,7 @@
 		};
 		14BD4FD51EE847A0000218B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 888F3398FE15C89F9EFC57A5 /* Pods-ImageCache.release.xcconfig */;
+			baseConfigurationReference = 4AEC47C87843217DA6144F01 /* Pods-SKImageCache.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -553,7 +537,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ImageCache/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.ImageCache;
@@ -565,10 +549,10 @@
 		};
 		14BD4FD71EE847A0000218B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBB2F35406C0598CECF0F31C /* Pods-ImageCacheTests.debug.xcconfig */;
+			baseConfigurationReference = 23B642CDDDB0336EA8CD2193 /* Pods-SKImageCacheTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MV978XDK83;
-				INFOPLIST_FILE = ImageCacheTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.ImageCacheTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -578,10 +562,10 @@
 		};
 		14BD4FD81EE847A0000218B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBA80831AACFB5647EFDD813 /* Pods-ImageCacheTests.release.xcconfig */;
+			baseConfigurationReference = 85F6DEE740B22709F7F1DD54 /* Pods-SKImageCacheTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MV978XDK83;
-				INFOPLIST_FILE = ImageCacheTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skladek.ImageCacheTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -592,7 +576,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14BD4FB91EE847A0000218B7 /* Build configuration list for PBXProject "ImageCache" */ = {
+		14BD4FB91EE847A0000218B7 /* Build configuration list for PBXProject "SKImageCache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14BD4FD11EE847A0000218B7 /* Debug */,
@@ -601,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14BD4FD31EE847A0000218B7 /* Build configuration list for PBXNativeTarget "ImageCache" */ = {
+		14BD4FD31EE847A0000218B7 /* Build configuration list for PBXNativeTarget "SKImageCache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14BD4FD41EE847A0000218B7 /* Debug */,
@@ -610,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14BD4FD61EE847A0000218B7 /* Build configuration list for PBXNativeTarget "ImageCacheTests" */ = {
+		14BD4FD61EE847A0000218B7 /* Build configuration list for PBXNativeTarget "SKImageCacheTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14BD4FD71EE847A0000218B7 /* Debug */,
