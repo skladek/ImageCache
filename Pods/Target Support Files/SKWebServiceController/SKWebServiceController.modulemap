@@ -1,0 +1,6 @@
+framework module SKWebServiceController {
+  umbrella header "SKWebServiceController-umbrella.h"
+
+  export *
+  module * { export * }
+}
