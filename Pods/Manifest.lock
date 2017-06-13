@@ -1,18 +1,24 @@
 PODS:
   - Nimble (7.0.0)
   - Quick (1.1.0)
+  - SKTableViewDataSource (0.0.2)
+  - SKWebServiceController (0.0.2)
   - SwiftLint (0.19.0)
 
 DEPENDENCIES:
   - Nimble (= 7.0.0)
   - Quick (= 1.1.0)
+  - SKTableViewDataSource (= 0.0.2)
+  - SKWebServiceController (= 0.0.2)
   - SwiftLint (= 0.19.0)
 
 SPEC CHECKSUMS:
   Nimble: 874982b605d4d752fcac6be695d13c502de84b1b
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  SKTableViewDataSource: 4f530783f3ab2e1c2a2b3e8e8e0e7e19f3b7d856
+  SKWebServiceController: 694347585e0ed9e67cb1a9dc73c9c1db472c5255
   SwiftLint: 3537a05b34060e78e7510f04fb7537d738247803
 
-PODFILE CHECKSUM: 3c3f5bcf991ac8432905894f665580bc0eed2147
+PODFILE CHECKSUM: 3076622f20876b2eb14d7bcfb510d1f89cdf2607
 
 COCOAPODS: 1.2.1

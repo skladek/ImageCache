@@ -8,18 +8,21 @@
 
 import UIKit
 
-class URLConstructor: NSObject {
+/// A tuple containing the constructed URL or an error explaining why the URL could not be constructed.
+typealias URLResult = (url: URL?, error: NSError?)
+
+protocol URLConstructable {
+    func urlWith(endpoint: String?, parameters: [String : String]?) -> URLResult
+}
+
+class URLConstructor: URLConstructable {
     // MARK: Class Types
 
-    /// A tuple containing the constructed URL or an error explaining why the URL could not be constructed.
-    typealias URLResult = (url: URL?, error: NSError?)
+    // MARK: Internal Properties
 
-    // MARK: Private Properties
-
-    private let baseURL: String
+    let baseURL: String
 
     // MARK: Init Methods
-
 
     /// Initializes a URL constructor with a base URL to use to construct URLs from.
     ///
@@ -82,7 +85,7 @@ class URLConstructor: NSObject {
         }
 
         let parametersString = parametersArray.joined(separator: "&")
-        
+
         return (parametersString.isEmpty) ? nil : parametersString
     }
 }
