@@ -7,6 +7,7 @@
 //
 
 import SKImageCache
+import SKWebServiceController
 import UIKit
 
 class FlickrController: WebServiceController {
