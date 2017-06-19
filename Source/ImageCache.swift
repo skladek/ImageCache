@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-public protocol ImageCacheDelegate: class {
-    func loadImageAtURL(_ url: URL, completion: @escaping ImageCache.RemoteImageCompletion) -> URLSessionDataTask?
-}
-
 /// An object to handle caching of images using their remote URL as the key for retrieval.
 public class ImageCache {
 

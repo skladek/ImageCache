@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142B565E1EF7740200FCAF4E /* ImageCacheDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B565D1EF7740200FCAF4E /* ImageCacheDelegate.swift */; };
 		1431B8E61EEB154F00D767DA /* SKImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1431B8DC1EEB154F00D767DA /* SKImageCache.framework */; };
 		1431B9061EEB15BE00D767DA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8F71EEB15BE00D767DA /* ImageCache.swift */; };
 		1431B9081EEB15BE00D767DA /* PlaceholderImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B8F91EEB15BE00D767DA /* PlaceholderImageHandler.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		142B565D1EF7740200FCAF4E /* ImageCacheDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheDelegate.swift; sourceTree = "<group>"; };
 		1431B8DC1EEB154F00D767DA /* SKImageCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SKImageCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1431B8E51EEB154F00D767DA /* SKImageCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKImageCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1431B8F71EEB15BE00D767DA /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				1431B8F71EEB15BE00D767DA /* ImageCache.swift */,
+				142B565D1EF7740200FCAF4E /* ImageCacheDelegate.swift */,
 				1431B8F91EEB15BE00D767DA /* PlaceholderImageHandler.swift */,
 				1431B8FB1EEB15BE00D767DA /* UIImageView.swift */,
 			);
@@ -384,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1431B9081EEB15BE00D767DA /* PlaceholderImageHandler.swift in Sources */,
+				142B565E1EF7740200FCAF4E /* ImageCacheDelegate.swift in Sources */,
 				1431B90A1EEB15BE00D767DA /* UIImageView.swift in Sources */,
 				1431B9061EEB15BE00D767DA /* ImageCache.swift in Sources */,
 			);
