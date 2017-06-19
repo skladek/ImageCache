@@ -6,7 +6,7 @@
 ![Platform Status](https://img.shields.io/cocoapods/p/SKImageCache.svg)
 ![License Status](https://img.shields.io/github/license/skladek/SKImageCache.svg)
 
-SKImageCache provides an object to handle image loading and caching.
+SKImageCache provides an object to handle image loading and caching. Check out the SampleProject in the workspace to see some usage examples.
 
 ---
 
