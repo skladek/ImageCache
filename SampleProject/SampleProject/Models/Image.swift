@@ -1,11 +1,3 @@
-//
-//  Image.swift
-//  ImageCache
-//
-//  Created by Sean on 6/1/17.
-//  Copyright © 2017 Sean Kladek. All rights reserved.
-//
-
 import UIKit
 
 class Image {
