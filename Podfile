@@ -17,6 +17,6 @@ end
 
 target 'SampleProject' do
 	project 'SampleProject/SampleProject.xcodeproj'
-	pod 'SKTableViewDataSource', '= 0.0.2'
+	pod 'SKTableViewDataSource', '= 1.0.1'
 	pod 'SKWebServiceController', '= 0.0.6'
 end
