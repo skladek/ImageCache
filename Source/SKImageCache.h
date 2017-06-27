@@ -1,11 +1,3 @@
-//
-//  SKImageCache.h
-//  SKImageCache
-//
-//  Created by Sean on 6/9/17.
-//  Copyright © 2017 Sean Kladek. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 //! Project version number for SKImageCache.
