@@ -1,11 +1,4 @@
-//
-//  ImagesController.swift
-//  ImageCache
-//
-//  Created by Sean on 6/1/17.
-//  Copyright © 2017 Sean Kladek. All rights reserved.
-//
-
+import SKWebServiceController
 import UIKit
 
 class ImagesController {
@@ -15,12 +8,17 @@ class ImagesController {
         }
 
         let parameters = [
-            "is_getty" : "1",
+            "api_key" : kAPI_KEY,
+            "format" : "json",
+            "is_getty" : true,
             "method" : "flickr.photos.search",
+            "nojsoncallback" : true,
             "tags" : searchTerm
-        ]
+        ] as [String : Any]
 
-        FlickrController.shared.get(nil, parameters: parameters) { (object, response, error) in
+        let requestConfiguration = RequestConfiguration(queryParameters: parameters)
+
+        FlickrController.shared.get(nil, requestConfiguration: requestConfiguration) { (object, response, error) in
             guard let object = object as? [String : Any] else {
                 completion(nil, error)
                 return

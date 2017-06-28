@@ -1,11 +1,3 @@
-//
-//  HomeViewController.swift
-//  ImageCache
-//
-//  Created by Sean on 5/31/17.
-//  Copyright © 2017 Sean Kladek. All rights reserved.
-//
-
 import SKTableViewDataSource
 import UIKit
 
@@ -20,12 +12,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let cellReuseId = "HomeViewControllerCellReuseId"
+        let cellNib = UINib(nibName: "ImageCell", bundle: Bundle.main)
 
-        let nib = UINib(nibName: "ImageCell", bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: cellReuseId)
-
-        dataSource = TableViewDataSource<Image>(objects: [Image](), cellReuseId: cellReuseId, cellPresenter: { (cell, object) in
+        dataSource = TableViewDataSource(objects: [Image](), cell: cellNib, cellPresenter: { (cell, object) in
             guard let cell = cell as? ImageCell else {
                 return
             }
