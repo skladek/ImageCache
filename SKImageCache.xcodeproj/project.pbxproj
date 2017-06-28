@@ -105,11 +105,11 @@
 		1431B8F61EEB15BE00D767DA /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				1431B8F81EEB15BE00D767DA /* Info.plist */,
-				1431B8FA1EEB15BE00D767DA /* SKImageCache.h */,
 				1431B8F71EEB15BE00D767DA /* ImageCache.swift */,
 				142B565D1EF7740200FCAF4E /* ImageCacheDelegate.swift */,
+				1431B8F81EEB15BE00D767DA /* Info.plist */,
 				1431B8F91EEB15BE00D767DA /* PlaceholderImageHandler.swift */,
+				1431B8FA1EEB15BE00D767DA /* SKImageCache.h */,
 				1431B8FB1EEB15BE00D767DA /* UIImageView.swift */,
 			);
 			path = Source;
