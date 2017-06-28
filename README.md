@@ -8,6 +8,12 @@
 
 SKImageCache provides an object to handle image loading and caching. Check out the SampleProject in the workspace to see some usage examples.
 
+- [Installation](#installation)
+- [Initialization](#initialization)
+- [Implementation](#implementation)
+- [ImageCacheDelegate](#imagecachedelegate)
+- [UIImageView Extension](#uiimageview-extension)
+
 ---
 
 ## Installation
