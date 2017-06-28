@@ -6,13 +6,7 @@ class FlickrController: WebServiceController {
     static let shared = FlickrController()
 
     init() {
-        let defaultParameters = [
-            "api_key" : kAPI_KEY,
-            "format" : "json",
-            "nojsoncallback" : "1",
-        ]
-
-        super.init(baseURL: kBASE_URL, defaultParameters: defaultParameters)
+        super.init(baseURL: kBASE_URL)
 
         ImageCache.shared.delegate = self
     }
