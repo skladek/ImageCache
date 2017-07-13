@@ -11,17 +11,24 @@ class LocalFileController {
         return image
     }
 
-    func saveImage(_ image: UIImage?, forURL url: URL, directory: String?) {
-//        if let data = UIImagePNGRepresentation(image),
-//            let directoryPath = directoryPathString(directory) {
+    func saveImage(_ image: UIImage?, fileName: String, directory: String?) {
+        guard let image = image else {
+            return
+        }
+
+        if let data = UIImagePNGRepresentation(image),
+            let directoryPath = directoryPathString(directory) {
+            createDirectoryIfNecessary(path: directoryPath)
+            if let filePath = filePathURL(fileName, directory: directory) {
+                try? data.write(to: filePath)
+            }
+        }
+
+
+
 //
-//        }
-//
-//
-//
-//
-//            let fileName = imageNameFromURL(url) as? String,
-//            let filePath = filePathURL(fileName, directory: directory) {
+//        let fileName = imageNameFromURL(url) as? String,
+//        let filePath = filePathURL(fileName, directory: directory) {
 //            do {
 //                try data.write(to: filePath)
 //            } catch {
@@ -31,9 +38,12 @@ class LocalFileController {
     }
 
     private func createDirectoryIfNecessary(path: String) {
-//        let pathExists = FileManager.default.fileExists(atPath: path, isDirectory: true)
-//
-//        FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: false, attributes: nil)
+        var isDirectory: ObjCBool = true
+        if FileManager.default.fileExists(atPath: path, isDirectory: &isDirectory) == true {
+            return
+        }
+
+        try? FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: false, attributes: nil)
     }
 
     private func directoryPathString(_ directory: String?) -> String? {

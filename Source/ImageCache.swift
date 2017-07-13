@@ -58,8 +58,9 @@ public class ImageCache {
             return
         }
 
-        if useLocalStorage == true {
-            localFileController.saveImage(image, forURL: url, directory: directory)
+        if useLocalStorage == true,
+            let imageName = imageNameFromURL(url) as? String {
+            localFileController.saveImage(image, fileName: imageName, directory: directory)
         }
 
         let imageName = imageNameFromURL(url)
