@@ -23,14 +23,6 @@ class ImageViewModel: NSObject {
         return "placeholderImage"
     }
 
-    func image(completion: @escaping ImageCache.ImageCompletion) {
-        guard let url = image.imageURL() else {
-            return
-        }
-
-        imageDownloadTask = ImageCache.shared.getImage(url: url, directory: "12345/", skipCache: true, completion: completion)
-    }
-
     func title() -> String {
         return image.title
     }

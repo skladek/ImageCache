@@ -29,20 +29,20 @@ public class ImageCache {
 
     // MARK: Internal Variables
 
-    let bundle: Bundle
-
     let cache: NSCache<AnyObject, UIImage>
+
+    let localFileController: LocalFileController
 
     // MARK: Init Methods
 
     init() {
-        self.bundle = Bundle.main
         self.cache = NSCache<AnyObject, UIImage>()
+        self.localFileController = LocalFileController()
     }
 
-    init(bundle: Bundle, cache: NSCache<AnyObject, UIImage>) {
-        self.bundle = bundle
+    init(cache: NSCache<AnyObject, UIImage>, localFileController: LocalFileController) {
         self.cache = cache
+        self.localFileController = localFileController
     }
 
     // MARK: Public Methods
@@ -59,16 +59,7 @@ public class ImageCache {
         }
 
         if useLocalStorage == true {
-            if let data = UIImagePNGRepresentation(image),
-                let fileName = imageNameFromURL(url) as? String,
-                let filePath = filePathURL(fileName, directory: directory) {
-                do {
-                    try data.write(to: filePath)
-                } catch {
-                    print(error)
-                }
-            }
-
+            localFileController.saveImage(image, forURL: url, directory: directory)
         }
 
         let imageName = imageNameFromURL(url)
@@ -96,7 +87,7 @@ public class ImageCache {
 
         if useLocalStorage == true {
             if let fileName = imageNameFromURL(url) as? String {
-                if let image = retrieveFromLocalStorage(imageName: fileName, directory: directory) {
+                if let image = localFileController.getImage(imageName: fileName, directory: directory) {
                     completion(image, false, nil)
                 }
             }
@@ -118,37 +109,6 @@ public class ImageCache {
 
     // MARK: Private Methods
 
-    private func documentsDirectory() -> String? {
-        return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
-    }
-
-    private func filePathString(_ fileName: String, directory: String?) -> String? {
-        var path: String? = nil
-
-        if let documentsDirectory = documentsDirectory() {
-            path = documentsDirectory
-            path?.append("/")
-
-            if let directory = directory {
-                path?.append(directory)
-            }
-
-            path?.append(fileName)
-        }
-
-        return path
-    }
-
-    private func filePathURL(_ fileName: String, directory: String? = nil) -> URL? {
-        var url: URL? = nil
-
-        if let filePath = filePathString(fileName, directory: directory) {
-            url = URL(fileURLWithPath: filePath)
-        }
-
-        return url
-    }
-
     private func imageNameFromURL(_ url: URL) -> AnyObject {
         return url.lastPathComponent as AnyObject
     }
@@ -156,15 +116,5 @@ public class ImageCache {
     private func retrieveFromCache(url: URL) -> UIImage? {
         let imageName = imageNameFromURL(url)
         return cache.object(forKey: imageName)
-    }
-
-    private func retrieveFromLocalStorage(imageName: String, directory: String?) -> UIImage? {
-        var image: UIImage? = nil
-
-        if let imagePath = filePathString(imageName, directory: directory) {
-            image = UIImage(contentsOfFile: imagePath)
-        }
-
-        return image
     }
 }
