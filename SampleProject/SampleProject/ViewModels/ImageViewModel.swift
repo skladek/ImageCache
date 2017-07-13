@@ -28,7 +28,7 @@ class ImageViewModel: NSObject {
             return
         }
 
-        imageDownloadTask = ImageCache.shared.getImage(url: url, completion: completion)
+        imageDownloadTask = ImageCache.shared.getImage(url: url, directory: nil, skipCache: true, completion: completion)
     }
 
     func title() -> String {
