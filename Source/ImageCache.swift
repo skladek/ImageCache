@@ -6,9 +6,13 @@ public class ImageCache {
 
     // MARK: Class Types
 
+    /// Defines the source of the image.
     public enum ImageSource {
+        /// The image was retrieved from the cache.
         case cache
+        /// The image was retrieved from disk.
         case localStorage
+        /// The image was retrieved from the remote source.
         case remote
     }
 

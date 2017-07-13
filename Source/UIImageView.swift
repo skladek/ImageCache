@@ -4,12 +4,12 @@ public extension UIImageView {
 
     // MARK: Internal Types
 
-    struct Image {
+    internal struct Image {
         let placeholderImageName: String?
         let url: URL?
     }
 
-    struct CacheConfig {
+    internal struct CacheConfig {
         let directory: String?
         let imageCache: ImageCache
         let imageHandler: ImageHandling
