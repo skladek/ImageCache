@@ -1,6 +1,11 @@
 import Foundation
 
-class LocalFileController {
+protocol LocalFileControllerProtocol {
+    func getImage(imageName: String, directory: String?) -> UIImage?
+    func saveImage(_ image: UIImage?, fileName: String, directory: String?)
+}
+
+class LocalFileController: LocalFileControllerProtocol {
     func getImage(imageName: String, directory: String?) -> UIImage? {
         var image: UIImage? = nil
 

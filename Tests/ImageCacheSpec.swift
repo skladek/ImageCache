@@ -8,15 +8,17 @@ class ImageCacheSpec: QuickSpec {
     override func spec() {
         describe("ImageCache") {
             var delegate: MockImageCacheDelegate!
+            var mockLocalFileController: LocalFileControllerProtocol!
             var mockNSCache: MockNSCache!
             var unitUnderTest: ImageCache!
             var url: URL!
 
             beforeEach {
                 delegate = MockImageCacheDelegate()
+                mockLocalFileController = MockLocalFileController()
                 mockNSCache = MockNSCache()
                 url = URL(string: "http://example.url/image1.png")!
-                unitUnderTest = ImageCache(cache: mockNSCache)
+                unitUnderTest = ImageCache(cache: mockNSCache, localFileController: mockLocalFileController)
                 unitUnderTest.delegate = delegate
             }
 
@@ -64,16 +66,16 @@ class ImageCacheSpec: QuickSpec {
 
                 it("Should return true for the from cache value if an image is returned from the cache") {
                     mockNSCache.shouldReturnImage = true
-                    let _ = unitUnderTest.getImage(url: url, completion: { (_, fromCache, _) in
-                        expect(fromCache).to(beTrue())
+                    let _ = unitUnderTest.getImage(url: url, completion: { (_, source, _) in
+                        expect(source).to(equal(.cache))
                     })
                 }
 
                 it("Should not return a value from the cache if skipCache is set to true.") {
                     mockNSCache.shouldReturnImage = true
                     waitUntil { done in
-                        let _ = unitUnderTest.getImage(url: url, skipCache: true, completion: { (_, fromCache, _) in
-                            expect(fromCache).to(beFalse())
+                        let _ = unitUnderTest.getImage(url: url, skipCache: true, completion: { (_, source, _) in
+                            expect(source).to(equal(ImageCache.ImageSource.remote))
                             done()
                         })
                     }

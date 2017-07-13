@@ -36,7 +36,7 @@ public class ImageCache {
 
     let cache: NSCache<AnyObject, UIImage>
 
-    let localFileController: LocalFileController
+    let localFileController: LocalFileControllerProtocol
 
     // MARK: Init Methods
 
@@ -45,7 +45,7 @@ public class ImageCache {
         self.localFileController = LocalFileController()
     }
 
-    init(cache: NSCache<AnyObject, UIImage>, localFileController: LocalFileController) {
+    init(cache: NSCache<AnyObject, UIImage>, localFileController: LocalFileControllerProtocol) {
         self.cache = cache
         self.localFileController = localFileController
     }
