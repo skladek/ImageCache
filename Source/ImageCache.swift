@@ -103,7 +103,7 @@ public class ImageCache {
         }
 
         return delegate?.loadImageAtURL(url, completion: { [weak self] (image, error) in
-            self?.cacheImage(image, forURL: url)
+            self?.cacheImage(image, forURL: url, directory: directory)
             completion(image, false, error)
         })
     }
@@ -145,18 +145,6 @@ public class ImageCache {
         if let filePath = filePathString(fileName, directory: directory) {
             url = URL(fileURLWithPath: filePath)
         }
-
-//
-//
-//        if var filePathURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-//            if let directory = directory {
-//                filePathURL.appendPathComponent(directory)
-//            }
-//
-//            filePathURL.appendPathComponent(fileName)
-//
-//            url = filePathURL
-//        }
 
         return url
     }

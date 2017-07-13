@@ -12,16 +12,16 @@ public extension UIImageView {
     ///   - placeholderImageName: The name of the placeholder image. Setting this to nil will set image to nil.
     /// - Returns: The URLSessionDataTask if a retrieval from the remote source is necessary.
     @discardableResult
-    public func setImageFromURL(_ url: URL?, placeholderImageName: String? = nil) -> URLSessionDataTask? {
-        return setImageFromURL(url, placeholderImageName: placeholderImageName, imageCache: ImageCache.shared, imageHandler: PlaceholderImageHandler())
+    public func setImageFromURL(_ url: URL?, placeholderImageName: String? = nil, directory: String? = nil, skipCache: Bool = false) -> URLSessionDataTask? {
+        return setImageFromURL(url, placeholderImageName: placeholderImageName, imageCache: ImageCache.shared, imageHandler: PlaceholderImageHandler(), directory: directory, skipCache: skipCache)
     }
 
     // MARK: Internal Methods
 
-    internal func setImageFromURL(_ url: URL?, placeholderImageName: String?, imageCache: ImageCache, imageHandler: ImageHandling) -> URLSessionDataTask? {
+    internal func setImageFromURL(_ url: URL?, placeholderImageName: String?, imageCache: ImageCache, imageHandler: ImageHandling, directory: String?, skipCache: Bool) -> URLSessionDataTask? {
         self.image = imageHandler.placeholderImage(placeholderImageName, bundle: nil)
 
-        return imageHandler.image(url, imageCache: imageCache, completion: { (image, fromCache, _) in
+        return imageHandler.image(url, imageCache: imageCache, directory: directory, skipCache: skipCache, completion: { (image, fromCache, _) in
             self.imageCompletion(image: image, fromCache: fromCache, imageHandler: imageHandler)
         })
     }

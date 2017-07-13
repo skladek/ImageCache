@@ -3,7 +3,7 @@ import UIKit
 
 protocol ImageHandling {
     func dissolveToImage(_ image: UIImage, onView view: UIImageView)
-    func image(_ url: URL?, imageCache: ImageCache, completion: @escaping ImageCache.ImageCompletion) -> URLSessionDataTask?
+    func image(_ url: URL?, imageCache: ImageCache, directory: String?, skipCache: Bool, completion: @escaping ImageCache.ImageCompletion) -> URLSessionDataTask?
     func placeholderImage(_ imageName: String?, bundle: Bundle?) -> UIImage?
     func setImage(_ image: UIImage, onView view: UIImageView)
 }
@@ -18,12 +18,12 @@ class PlaceholderImageHandler: ImageHandling {
         }, completion: nil)
     }
 
-    func image(_ url: URL?, imageCache: ImageCache, completion: @escaping ImageCache.ImageCompletion) -> URLSessionDataTask? {
+    func image(_ url: URL?, imageCache: ImageCache, directory: String?, skipCache: Bool, completion: @escaping ImageCache.ImageCompletion) -> URLSessionDataTask? {
         guard let url = url else {
             return nil
         }
 
-        return imageCache.getImage(url: url, completion: completion)
+        return imageCache.getImage(url: url, directory: directory, skipCache: skipCache, completion: completion)
     }
 
     func placeholderImage(_ imageName: String?, bundle: Bundle? = nil) -> UIImage? {
