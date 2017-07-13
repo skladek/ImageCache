@@ -23,18 +23,6 @@ class LocalFileController {
                 try? data.write(to: filePath)
             }
         }
-
-
-
-//
-//        let fileName = imageNameFromURL(url) as? String,
-//        let filePath = filePathURL(fileName, directory: directory) {
-//            do {
-//                try data.write(to: filePath)
-//            } catch {
-//                print(error)
-//            }
-//        }
     }
 
     private func createDirectoryIfNecessary(path: String) {
@@ -82,7 +70,7 @@ class LocalFileController {
         if let filePath = filePathString(fileName, directory: directory) {
             url = URL(fileURLWithPath: filePath)
         }
-        
+
         return url
     }
 }

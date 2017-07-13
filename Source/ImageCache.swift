@@ -6,9 +6,14 @@ public class ImageCache {
 
     // MARK: Class Types
 
-    // TODO: Change the bool to an image source enum
-    /// A closure providing an optional image, boolean indicating true if the image was retrieved from the cache, and error.
-    public typealias ImageCompletion = (UIImage?, Bool, Error?) -> Void
+    public enum ImageSource {
+        case cache
+        case localStorage
+        case remote
+    }
+
+    /// A closure providing an optional image, image source, and error.
+    public typealias ImageCompletion = (UIImage?, ImageSource, Error?) -> Void
 
     /// A closure to be returned by a remote source providing an optional image and error.
     public typealias RemoteImageCompletion = (UIImage?, Error?) -> Void
@@ -47,12 +52,12 @@ public class ImageCache {
 
     // MARK: Public Methods
 
-    // TODO: Update Docs
     /// Adds the provided image to the cache using the url as the key.
     ///
     /// - Parameters:
-    ///   - image: The image to cache.
-    ///   - url: The image's remote path.
+    ///   - image: The image to cache
+    ///   - url: The image's remote path
+    ///   - directory: The directory to save the image in if useLocalStorage is set to true.
     public func cacheImage(_ image: UIImage?, forURL url: URL, directory: String? = nil) {
         guard let image = image else {
             return
@@ -72,31 +77,31 @@ public class ImageCache {
         cache.removeAllObjects()
     }
 
-    // TODO: Update Docs
-    /// Retrieves an images from the provided URL. This could be from the cache or from the remote source.
+    /// Retrieves an image from the provided URL. This could be from the cache or from the remote source.
     ///
     /// - Parameters:
     ///   - url: The URL for the image.
-    ///   - skipCache: If true, the cached is not checked first, the image is retrieved from the remote source and added to the cache.
+    ///   - directory: The directory of the image if useLocalStorage is set to true. This path will be appended to the documents directory path.
+    ///   - skipCache: If true, the cache is not checked first, the image is retrieved from the remote source and added to the cache.
     ///   - completion: The image, a boolean indicating true if the image was retrieved from the cache, and an error.
     /// - Returns: An optional data task if the image is retrieved from the remote source.
     public func getImage(url: URL, directory: String? = nil, skipCache: Bool = false, completion: @escaping ImageCompletion) -> URLSessionDataTask? {
         if let image = retrieveFromCache(url: url), skipCache == false {
-            completion(image, true, nil)
+            completion(image, .cache, nil)
             return nil
         }
 
         if useLocalStorage == true {
             if let fileName = imageNameFromURL(url) as? String {
                 if let image = localFileController.getImage(imageName: fileName, directory: directory) {
-                    completion(image, false, nil)
+                    completion(image, .localStorage, nil)
                 }
             }
         }
 
         return delegate?.loadImageAtURL(url, completion: { [weak self] (image, error) in
             self?.cacheImage(image, forURL: url, directory: directory)
-            completion(image, false, error)
+            completion(image, .remote, error)
         })
     }
 

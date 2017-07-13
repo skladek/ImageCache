@@ -21,20 +21,20 @@ public extension UIImageView {
     internal func setImageFromURL(_ url: URL?, placeholderImageName: String?, imageCache: ImageCache, imageHandler: ImageHandling, directory: String?, skipCache: Bool) -> URLSessionDataTask? {
         self.image = imageHandler.placeholderImage(placeholderImageName, bundle: nil)
 
-        return imageHandler.image(url, imageCache: imageCache, directory: directory, skipCache: skipCache, completion: { (image, fromCache, _) in
-            self.imageCompletion(image: image, fromCache: fromCache, imageHandler: imageHandler)
+        return imageHandler.image(url, imageCache: imageCache, directory: directory, skipCache: skipCache, completion: { (image, source, _) in
+            self.imageCompletion(image: image, source: source, imageHandler: imageHandler)
         })
     }
 
-    internal func imageCompletion(image: UIImage?, fromCache: Bool, imageHandler: ImageHandling) {
+    internal func imageCompletion(image: UIImage?, source: ImageCache.ImageSource, imageHandler: ImageHandling) {
         guard let image = image else {
             return
         }
 
-        if fromCache == true {
-            imageHandler.setImage(image, onView: self)
-        } else {
+        if source == .remote {
             imageHandler.dissolveToImage(image, onView: self)
+        } else {
+            imageHandler.setImage(image, onView: self)
         }
     }
 }
