@@ -95,12 +95,11 @@ public class ImageCache {
             return nil
         }
 
-        if useLocalStorage == true {
-            if let fileName = imageNameFromURL(url) as? String {
-                if let image = localFileController.getImage(imageName: fileName, directory: directory) {
-                    completion(image, .localStorage, nil)
-                }
-            }
+        if useLocalStorage == true,
+            let fileName = imageNameFromURL(url) as? String,
+            let image = localFileController.getImage(imageName: fileName, directory: directory) {
+            completion(image, .localStorage, nil)
+            return nil
         }
 
         return delegate?.loadImageAtURL(url, completion: { [weak self] (image, error) in

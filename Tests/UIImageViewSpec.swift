@@ -63,16 +63,16 @@ class UIImageViewSpec: QuickSpec {
                     expect(imageHandler.disolveToImageCalled).to(beFalse())
                 }
 
-                it("Should call set image on the image handler if from cache is true and the image is not nil") {
+                it("Should call set image on the image handler if the source is not remote and the image is not nil") {
                     let bundle = Bundle(for: type(of: self))
                     let image = UIImage(named: "testimage", in: bundle, compatibleWith: nil)
                     unitUnderTest.imageCompletion(image: image, source: .cache, imageHandler: imageHandler)
                 }
 
-                it("Should call dissolve to image on the image handler if from cache is false and the image is not nil") {
+                it("Should call dissolve to image on the image handler if the source is remote and the image is not nil") {
                     let bundle = Bundle(for: type(of: self))
                     let image = UIImage(named: "testimage", in: bundle, compatibleWith: nil)
-                    unitUnderTest.imageCompletion(image: image, source: .cache, imageHandler: imageHandler)
+                    unitUnderTest.imageCompletion(image: image, source: .remote, imageHandler: imageHandler)
                 }
             }
         }

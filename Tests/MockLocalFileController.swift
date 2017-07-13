@@ -9,7 +9,7 @@ class MockLocalFileController: LocalFileControllerProtocol {
     func getImage(imageName: String, directory: String?) -> UIImage? {
         getImageCalled = true
 
-        return nil
+        return UIImage()
     }
 
     func saveImage(_ image: UIImage?, fileName: String, directory: String?) {
