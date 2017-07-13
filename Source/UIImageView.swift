@@ -2,6 +2,20 @@ import UIKit
 
 public extension UIImageView {
 
+    // MARK: Internal Types
+
+    struct Image {
+        let placeholderImageName: String?
+        let url: URL?
+    }
+
+    struct CacheConfig {
+        let directory: String?
+        let imageCache: ImageCache
+        let imageHandler: ImageHandling
+        let skipCache: Bool
+    }
+
     // MARK: Public Methods
 
     /// Sets the image on the image view to the placeholder image and then later to an image from the cache
@@ -13,16 +27,19 @@ public extension UIImageView {
     /// - Returns: The URLSessionDataTask if a retrieval from the remote source is necessary.
     @discardableResult
     public func setImageFromURL(_ url: URL?, placeholderImageName: String? = nil, directory: String? = nil, skipCache: Bool = false) -> URLSessionDataTask? {
-        return setImageFromURL(url, placeholderImageName: placeholderImageName, imageCache: ImageCache.shared, imageHandler: PlaceholderImageHandler(), directory: directory, skipCache: skipCache)
+        let image = Image(placeholderImageName: placeholderImageName, url: url)
+        let cacheConfig = CacheConfig(directory: directory, imageCache: ImageCache.shared, imageHandler: PlaceholderImageHandler(), skipCache: skipCache)
+
+        return setImage(image, withCacheConfig: cacheConfig)
     }
 
     // MARK: Internal Methods
 
-    internal func setImageFromURL(_ url: URL?, placeholderImageName: String?, imageCache: ImageCache, imageHandler: ImageHandling, directory: String?, skipCache: Bool) -> URLSessionDataTask? {
-        self.image = imageHandler.placeholderImage(placeholderImageName, bundle: nil)
+    internal func setImage(_ image: Image, withCacheConfig cacheConfig: CacheConfig) -> URLSessionDataTask? {
+        self.image = cacheConfig.imageHandler.placeholderImage(image.placeholderImageName, bundle: nil)
 
-        return imageHandler.image(url, imageCache: imageCache, directory: directory, skipCache: skipCache, completion: { (image, source, _) in
-            self.imageCompletion(image: image, source: source, imageHandler: imageHandler)
+        return cacheConfig.imageHandler.image(image.url, imageCache: cacheConfig.imageCache, directory: cacheConfig.directory, skipCache: cacheConfig.skipCache, completion: { (image, source, _) in
+            self.imageCompletion(image: image, source: source, imageHandler: cacheConfig.imageHandler)
         })
     }
 

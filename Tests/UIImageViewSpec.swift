@@ -33,13 +33,21 @@ class UIImageViewSpec: QuickSpec {
             }
 
             context("setImageFromURL(_:placeholderImageName:imageCache:imageHandler:)") {
+                var cacheConfig: UIImageView.CacheConfig!
+                var image: UIImageView.Image!
+
+                beforeEach {
+                    cacheConfig = UIImageView.CacheConfig(directory: nil, imageCache: imageCache, imageHandler: imageHandler, skipCache: false)
+                    image = UIImageView.Image(placeholderImageName: nil, url: nil)
+                }
+
                 it("Should call placeholder image on the image handler") {
-                    let _ = unitUnderTest.setImageFromURL(nil, placeholderImageName: nil, imageCache: imageCache, imageHandler: imageHandler, directory: nil, skipCache: false)
+                    let _ = unitUnderTest.setImage(image, withCacheConfig: cacheConfig)
                     expect(imageHandler.placeholderImageCalled).to(beTrue())
                 }
 
                 it("Should call image with URL on the image handler") {
-                    let _ = unitUnderTest.setImageFromURL(nil, placeholderImageName: nil, imageCache: imageCache, imageHandler: imageHandler, directory: nil, skipCache: false)
+                    let _ = unitUnderTest.setImage(image, withCacheConfig: cacheConfig)
                     expect(imageHandler.imageWithURLCalled).to(beTrue())
                 }
             }
