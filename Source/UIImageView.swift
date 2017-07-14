@@ -2,6 +2,20 @@ import UIKit
 
 public extension UIImageView {
 
+    // MARK: Internal Types
+
+    internal struct Image {
+        let placeholderImageName: String?
+        let url: URL?
+    }
+
+    internal struct CacheConfig {
+        let directory: String?
+        let imageCache: ImageCache
+        let imageHandler: ImageHandling
+        let skipCache: Bool
+    }
+
     // MARK: Public Methods
 
     /// Sets the image on the image view to the placeholder image and then later to an image from the cache
@@ -12,29 +26,32 @@ public extension UIImageView {
     ///   - placeholderImageName: The name of the placeholder image. Setting this to nil will set image to nil.
     /// - Returns: The URLSessionDataTask if a retrieval from the remote source is necessary.
     @discardableResult
-    public func setImageFromURL(_ url: URL?, placeholderImageName: String? = nil) -> URLSessionDataTask? {
-        return setImageFromURL(url, placeholderImageName: placeholderImageName, imageCache: ImageCache.shared, imageHandler: PlaceholderImageHandler())
+    public func setImageFromURL(_ url: URL?, placeholderImageName: String? = nil, directory: String? = nil, skipCache: Bool = false) -> URLSessionDataTask? {
+        let image = Image(placeholderImageName: placeholderImageName, url: url)
+        let cacheConfig = CacheConfig(directory: directory, imageCache: ImageCache.shared, imageHandler: PlaceholderImageHandler(), skipCache: skipCache)
+
+        return setImage(image, withCacheConfig: cacheConfig)
     }
 
     // MARK: Internal Methods
 
-    internal func setImageFromURL(_ url: URL?, placeholderImageName: String?, imageCache: ImageCache, imageHandler: ImageHandling) -> URLSessionDataTask? {
-        self.image = imageHandler.placeholderImage(placeholderImageName, bundle: nil)
+    internal func setImage(_ image: Image, withCacheConfig cacheConfig: CacheConfig) -> URLSessionDataTask? {
+        self.image = cacheConfig.imageHandler.placeholderImage(image.placeholderImageName, bundle: nil)
 
-        return imageHandler.image(url, imageCache: imageCache, completion: { (image, fromCache, _) in
-            self.imageCompletion(image: image, fromCache: fromCache, imageHandler: imageHandler)
+        return cacheConfig.imageHandler.image(image.url, imageCache: cacheConfig.imageCache, directory: cacheConfig.directory, skipCache: cacheConfig.skipCache, completion: { (image, source, _) in
+            self.imageCompletion(image: image, source: source, imageHandler: cacheConfig.imageHandler)
         })
     }
 
-    internal func imageCompletion(image: UIImage?, fromCache: Bool, imageHandler: ImageHandling) {
+    internal func imageCompletion(image: UIImage?, source: ImageCache.ImageSource, imageHandler: ImageHandling) {
         guard let image = image else {
             return
         }
 
-        if fromCache == true {
-            imageHandler.setImage(image, onView: self)
-        } else {
+        if source == .remote {
             imageHandler.dissolveToImage(image, onView: self)
+        } else {
+            imageHandler.setImage(image, onView: self)
         }
     }
 }

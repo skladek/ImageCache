@@ -13,9 +13,9 @@ class MockImageHandler: ImageHandling {
         disolveToImageCalled = true
     }
 
-    func image(_ url: URL?, imageCache: ImageCache, completion: @escaping ImageCache.ImageCompletion) -> URLSessionDataTask? {
+    func image(_ url: URL?, imageCache: ImageCache, directory: String?, skipCache: Bool, completion: @escaping ImageCache.ImageCompletion) -> URLSessionDataTask? {
         imageWithURLCalled = true
-        completion(nil, false, nil)
+        completion(nil, .remote, nil)
 
         return nil
     }
