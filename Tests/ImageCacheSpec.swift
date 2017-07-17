@@ -62,6 +62,13 @@ class ImageCacheSpec: QuickSpec {
                 }
             }
 
+            context("deleteDirectory(_:)") {
+                it("Should call delete directory on the local file controller") {
+                    unitUnderTest.deleteDirectory("")
+                    expect(mockLocalFileController.deleteDirectoryCalled).to(beTrue())
+                }
+            }
+
             context("emptyCache()") {
                 it("Should remove all items from the cache") {
                     unitUnderTest.emptyCache()

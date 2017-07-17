@@ -76,6 +76,9 @@ public class ImageCache {
         cache.setObject(image, forKey: imageName)
     }
 
+    /// Deletes the folder at the provided path.
+    ///
+    /// - Parameter directory: The directory to be deleted.
     public func deleteDirectory(_ directory: String) {
         localFileController.deleteDirectory(directory)
     }

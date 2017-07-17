@@ -25,14 +25,8 @@ class LocalFileController: LocalFileControllerProtocol {
     }
 
     func deleteDirectory(_ directory: String) {
-        guard let directoryPath = pathConstructor.directoryPathString(directory) else {
-            return
-        }
-
-        do {
-            try fileManager.removeItem(atPath: directoryPath)
-        } catch {
-            print(error)
+        if let directoryPath = pathConstructor.directoryPathString(directory) {
+            try? fileManager.removeItem(atPath: directoryPath)
         }
     }
 

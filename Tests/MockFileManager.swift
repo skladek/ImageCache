@@ -3,6 +3,7 @@ import Foundation
 class MockFileManager: FileManager {
     var createDirectoryCalled = false
     var fileExistsCalled = false
+    var removeItemCalled = false
 
     var fileExists = false
 
@@ -14,5 +15,9 @@ class MockFileManager: FileManager {
         fileExistsCalled = true
 
         return fileExists
+    }
+
+    override func removeItem(atPath path: String) throws {
+        removeItemCalled = true
     }
 }

@@ -8,13 +8,27 @@ class LocalFileControllerSpec: QuickSpec {
     override func spec() {
         describe("LocalFileController") {
             var dataWriter: MockDataWriter!
+            var fileManager: MockFileManager!
             var pathConstructor: MockPathConstructor!
             var unitUnderTest: LocalFileController!
 
             beforeEach {
                 dataWriter = MockDataWriter()
+                fileManager = MockFileManager()
                 pathConstructor = MockPathConstructor()
-                unitUnderTest = LocalFileController(dataWriter: dataWriter, pathConstructor: pathConstructor)
+                unitUnderTest = LocalFileController(dataWriter: dataWriter, fileManager: fileManager, pathConstructor: pathConstructor)
+            }
+
+            context("deleteDirectory(_:)") {
+                it("Should call directory path string on the path constructor") {
+                    unitUnderTest.deleteDirectory("")
+                    expect(pathConstructor.directoryPathStringCalled).to(beTrue())
+                }
+
+                it("Should call remove item on the file manager") {
+                    unitUnderTest.deleteDirectory("")
+                    expect(fileManager.removeItemCalled).to(beTrue())
+                }
             }
 
             context("getImage(imageName:directory:)") {
