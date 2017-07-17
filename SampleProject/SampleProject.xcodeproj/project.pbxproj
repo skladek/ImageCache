@@ -18,6 +18,8 @@
 		147FBCA41EE74F6500D2441D /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC901EE74F6500D2441D /* ImageViewModel.swift */; };
 		147FBCA51EE74F6500D2441D /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147FBC921EE74F6500D2441D /* ImageCell.swift */; };
 		147FBCA61EE74F6500D2441D /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147FBC931EE74F6500D2441D /* ImageCell.xib */; };
+		148805361F17EAA10025C60F /* SKImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144C79271EEB1875009311D0 /* SKImageCache.framework */; };
+		148805371F17EAA10025C60F /* SKImageCache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 144C79271EEB1875009311D0 /* SKImageCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D6EE782133C92AABD3DCC087 /* Pods_SampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1BF300E8414E75D8090775 /* Pods_SampleProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +38,28 @@
 			remoteGlobalIDString = 1431B8E51EEB154F00D767DA;
 			remoteInfo = SKImageCacheTests;
 		};
+		148805381F17EAA10025C60F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 144C79211EEB1875009311D0 /* SKImageCache.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1431B8DB1EEB154F00D767DA;
+			remoteInfo = SKImageCache;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1488053A1F17EAA10025C60F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				148805371F17EAA10025C60F /* SKImageCache.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		144C79211EEB1875009311D0 /* SKImageCache.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SKImageCache.xcodeproj; path = ../SKImageCache.xcodeproj; sourceTree = "<group>"; };
@@ -68,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6EE782133C92AABD3DCC087 /* Pods_SampleProject.framework in Frameworks */,
+				148805361F17EAA10025C60F /* SKImageCache.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,10 +227,12 @@
 				14D90F041EDF5220002D0ABA /* Resources */,
 				21C31914B199D805DC668ED9 /* [CP] Embed Pods Frameworks */,
 				CFC36C6E6F7AB662B9A3F4E7 /* [CP] Copy Pods Resources */,
+				1488053A1F17EAA10025C60F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				148805391F17EAA10025C60F /* PBXTargetDependency */,
 			);
 			name = SampleProject;
 			productName = ImageCache;
@@ -349,6 +375,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		148805391F17EAA10025C60F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SKImageCache;
+			targetProxy = 148805381F17EAA10025C60F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		147FBC7A1EE74F6500D2441D /* LaunchScreen.storyboard */ = {

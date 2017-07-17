@@ -29,18 +29,18 @@ class PlaceholderImageHandlerSpec: QuickSpec {
 
             context("image(_:imageCache:completion:") {
                 it("Should return nil if the URL is nil") {
-                    let result = unitUnderTest.image(nil, imageCache: imageCache, completion: { (_, _, _) in })
+                    let result = unitUnderTest.image(nil, imageCache: imageCache, directory: nil, skipCache: false, completion: { (_, _, _) in })
                     expect(result).to(beNil())
                 }
 
                 it("Should not call getImage on the image cache if the URL is nil") {
-                    let _ = unitUnderTest.image(nil, imageCache: imageCache, completion: { (_, _, _) in })
+                    let _ = unitUnderTest.image(nil, imageCache: imageCache, directory: nil, skipCache: false, completion: { (_, _, _) in })
                     expect(imageCache.getImageCalled).to(beFalse())
                 }
 
                 it("Should return a URLSessionDataTask if the URL is provided") {
                     let url = URL(string: "https://example.url")!
-                    let result = unitUnderTest.image(url, imageCache: imageCache, completion: { (_, _, _) in })
+                    let result = unitUnderTest.image(url, imageCache: imageCache, directory: nil, skipCache: false, completion: { (_, _, _) in })
                     expect(result).to(beAnInstanceOf(URLSessionDataTask.self))
                 }
             }
