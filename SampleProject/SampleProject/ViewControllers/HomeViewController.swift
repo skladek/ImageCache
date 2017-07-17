@@ -1,3 +1,4 @@
+import SKImageCache
 import SKTableViewDataSource
 import UIKit
 
@@ -8,6 +9,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var dataSource: TableViewDataSource<Image>? = nil
+
+    func deleteLocalStorageTapped() {
+        ImageCache.shared.deleteDirectory("12345/")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +29,9 @@ class HomeViewController: UIViewController {
         })
 
         tableView.dataSource = dataSource
+
+        let deleteButton = UIBarButtonItem(title: "Delete Local Storage", style: .done, target: self, action: #selector(deleteLocalStorageTapped))
+        navigationItem.rightBarButtonItem = deleteButton
     }
 }
 

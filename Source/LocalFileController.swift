@@ -1,6 +1,7 @@
 import Foundation
 
 protocol LocalFileControllerProtocol {
+    func deleteDirectory(_ directory: String)
     func getImage(imageName: String, directory: String?) -> UIImage?
     func saveImage(_ image: UIImage?, fileName: String, directory: String?)
 }
@@ -11,13 +12,22 @@ class LocalFileController: LocalFileControllerProtocol {
 
     let dataWriter: DataWriterProtocol
 
+    let fileManager: FileManager
+
     let pathConstructor: PathConstructorProtocol
 
     // MARK: Internal Methods
 
-    init(dataWriter: DataWriterProtocol = DataWriter(), pathConstructor: PathConstructorProtocol = PathConstructor()) {
+    init(dataWriter: DataWriterProtocol = DataWriter(), fileManager: FileManager = FileManager.default, pathConstructor: PathConstructorProtocol = PathConstructor()) {
         self.dataWriter = dataWriter
+        self.fileManager = fileManager
         self.pathConstructor = pathConstructor
+    }
+
+    func deleteDirectory(_ directory: String) {
+        if let directoryPath = pathConstructor.directoryPathString(directory) {
+            try? fileManager.removeItem(atPath: directoryPath)
+        }
     }
 
     func getImage(imageName: String, directory: String?) -> UIImage? {
