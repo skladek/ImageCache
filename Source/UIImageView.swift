@@ -4,7 +4,7 @@ public extension UIImageView {
 
     // MARK: Class Types
 
-    /// A closure providing any errors encountered when attempting to 
+    /// A closure providing any errors encountered when setting an image.
     public typealias SetImageCompletion = ((_ error: Error?) -> Void)
 
     // MARK: Internal Types
@@ -29,6 +29,9 @@ public extension UIImageView {
     /// - Parameters:
     ///   - url: The URL of the final image.
     ///   - placeholderImageName: The name of the placeholder image. Setting this to nil will set image to nil.
+    ///   - directory: The directory to save the image in. This path is appended to the documents directory.
+    ///   - skipCache: An optional parameter to skip the cache if desired.
+    ///   - completion: An optional completion returning any errors encountered during the image download.
     /// - Returns: The URLSessionDataTask if a retrieval from the remote source is necessary.
     @discardableResult
     public func setImageFromURL(_ url: URL?, placeholderImageName: String? = nil, directory: String? = nil, skipCache: Bool = false, completion: SetImageCompletion? = nil) -> URLSessionDataTask? {
