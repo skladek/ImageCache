@@ -13,7 +13,11 @@ class ImageCell: UITableViewCell {
     func setViewModel(_ viewModel: ImageViewModel) {
         self.viewModel = viewModel
 
-        imageDataTask = cellImage.setImageFromURL(viewModel.url(), placeholderImageName: viewModel.placeholderName(), directory: "12345/", skipCache: true)
+        imageDataTask = cellImage.setImageFromURL(viewModel.url(), placeholderImageName: viewModel.placeholderName())
+
+        imageDataTask = cellImage.setImageFromURL(viewModel.url(), placeholderImageName: viewModel.placeholderName(), directory: "12345/", skipCache: true, completion: { (error) in
+            print(error ?? "No errors")
+        })
 
         title.text = viewModel.title()
     }

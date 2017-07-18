@@ -42,12 +42,12 @@ class UIImageViewSpec: QuickSpec {
                 }
 
                 it("Should call placeholder image on the image handler") {
-                    let _ = unitUnderTest.setImage(image, withCacheConfig: cacheConfig)
+                    let _ = unitUnderTest.setImage(image, withCacheConfig: cacheConfig, completion: nil)
                     expect(imageHandler.placeholderImageCalled).to(beTrue())
                 }
 
                 it("Should call image with URL on the image handler") {
-                    let _ = unitUnderTest.setImage(image, withCacheConfig: cacheConfig)
+                    let _ = unitUnderTest.setImage(image, withCacheConfig: cacheConfig, completion: nil)
                     expect(imageHandler.imageWithURLCalled).to(beTrue())
                 }
             }

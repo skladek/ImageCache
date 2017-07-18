@@ -2,6 +2,11 @@ import UIKit
 
 public extension UIImageView {
 
+    // MARK: Class Types
+
+    /// A closure providing any errors encountered when attempting to 
+    public typealias SetImageCompletion = ((_ error: Error?) -> Void)
+
     // MARK: Internal Types
 
     internal struct Image {
@@ -26,20 +31,21 @@ public extension UIImageView {
     ///   - placeholderImageName: The name of the placeholder image. Setting this to nil will set image to nil.
     /// - Returns: The URLSessionDataTask if a retrieval from the remote source is necessary.
     @discardableResult
-    public func setImageFromURL(_ url: URL?, placeholderImageName: String? = nil, directory: String? = nil, skipCache: Bool = false) -> URLSessionDataTask? {
+    public func setImageFromURL(_ url: URL?, placeholderImageName: String? = nil, directory: String? = nil, skipCache: Bool = false, completion: SetImageCompletion? = nil) -> URLSessionDataTask? {
         let image = Image(placeholderImageName: placeholderImageName, url: url)
         let cacheConfig = CacheConfig(directory: directory, imageCache: ImageCache.shared, imageHandler: PlaceholderImageHandler(), skipCache: skipCache)
 
-        return setImage(image, withCacheConfig: cacheConfig)
+        return setImage(image, withCacheConfig: cacheConfig, completion: completion)
     }
 
     // MARK: Internal Methods
 
-    internal func setImage(_ image: Image, withCacheConfig cacheConfig: CacheConfig) -> URLSessionDataTask? {
+    internal func setImage(_ image: Image, withCacheConfig cacheConfig: CacheConfig, completion: SetImageCompletion?) -> URLSessionDataTask? {
         self.image = cacheConfig.imageHandler.placeholderImage(image.placeholderImageName, bundle: nil)
 
-        return cacheConfig.imageHandler.image(image.url, imageCache: cacheConfig.imageCache, directory: cacheConfig.directory, skipCache: cacheConfig.skipCache, completion: { (image, source, _) in
+        return cacheConfig.imageHandler.image(image.url, imageCache: cacheConfig.imageCache, directory: cacheConfig.directory, skipCache: cacheConfig.skipCache, completion: { (image, source, error) in
             self.imageCompletion(image: image, source: source, imageHandler: cacheConfig.imageHandler)
+            completion?(error)
         })
     }
 
