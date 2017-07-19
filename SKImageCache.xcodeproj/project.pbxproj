@@ -27,9 +27,9 @@
 		146729C81F1825FF00F63C0A /* DataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146729C71F1825FF00F63C0A /* DataWriter.swift */; };
 		146729CA1F18277C00F63C0A /* DataWriterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146729C91F18277C00F63C0A /* DataWriterSpec.swift */; };
 		146729CC1F1827C700F63C0A /* MockPathConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146729CB1F1827C700F63C0A /* MockPathConstructor.swift */; };
-		146729D01F182BFE00F63C0A /* LocalFileControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146729CF1F182BFE00F63C0A /* LocalFileControllerSpec.swift */; };
+		146729D01F182BFE00F63C0A /* LocalImageControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146729CF1F182BFE00F63C0A /* LocalImageControllerSpec.swift */; };
 		146729D21F182C5700F63C0A /* MockDataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146729D11F182C5700F63C0A /* MockDataWriter.swift */; };
-		1488053C1F18048F0025C60F /* LocalFileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488053B1F18048F0025C60F /* LocalFileController.swift */; };
+		1488053C1F18048F0025C60F /* LocalImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488053B1F18048F0025C60F /* LocalImageController.swift */; };
 		1488053E1F180D400025C60F /* MockLocalFileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488053D1F180D400025C60F /* MockLocalFileController.swift */; };
 		53267ACA653C18D6BBCE4FC5 /* Pods_SKImageCacheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D85B5EE84799A928C919C1D /* Pods_SKImageCacheTests.framework */; };
 		BD0CD376610896E40A3D00B7 /* Pods_SKImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72822C22DD9A3120F5F9B93 /* Pods_SKImageCache.framework */; };
@@ -69,9 +69,9 @@
 		146729C71F1825FF00F63C0A /* DataWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataWriter.swift; sourceTree = "<group>"; };
 		146729C91F18277C00F63C0A /* DataWriterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataWriterSpec.swift; sourceTree = "<group>"; };
 		146729CB1F1827C700F63C0A /* MockPathConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPathConstructor.swift; sourceTree = "<group>"; };
-		146729CF1F182BFE00F63C0A /* LocalFileControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalFileControllerSpec.swift; sourceTree = "<group>"; };
+		146729CF1F182BFE00F63C0A /* LocalImageControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalImageControllerSpec.swift; sourceTree = "<group>"; };
 		146729D11F182C5700F63C0A /* MockDataWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDataWriter.swift; sourceTree = "<group>"; };
-		1488053B1F18048F0025C60F /* LocalFileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalFileController.swift; sourceTree = "<group>"; };
+		1488053B1F18048F0025C60F /* LocalImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalImageController.swift; sourceTree = "<group>"; };
 		1488053D1F180D400025C60F /* MockLocalFileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLocalFileController.swift; sourceTree = "<group>"; };
 		1D85B5EE84799A928C919C1D /* Pods_SKImageCacheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKImageCacheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAAB79502825D02B7942500 /* Pods-SKImageCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKImageCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKImageCache/Pods-SKImageCache.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				1431B8F71EEB15BE00D767DA /* ImageCache.swift */,
 				142B565D1EF7740200FCAF4E /* ImageCacheDelegate.swift */,
 				1431B8F81EEB15BE00D767DA /* Info.plist */,
-				1488053B1F18048F0025C60F /* LocalFileController.swift */,
+				1488053B1F18048F0025C60F /* LocalImageController.swift */,
 				146729C51F18238B00F63C0A /* PathConstructor.swift */,
 				1431B8F91EEB15BE00D767DA /* PlaceholderImageHandler.swift */,
 				1431B8FA1EEB15BE00D767DA /* SKImageCache.h */,
@@ -169,7 +169,7 @@
 			children = (
 				146729C91F18277C00F63C0A /* DataWriterSpec.swift */,
 				1431B8FD1EEB15BE00D767DA /* ImageCacheSpec.swift */,
-				146729CF1F182BFE00F63C0A /* LocalFileControllerSpec.swift */,
+				146729CF1F182BFE00F63C0A /* LocalImageControllerSpec.swift */,
 				146729C11F181BE900F63C0A /* PathConstructorSpec.swift */,
 				1431B9031EEB15BE00D767DA /* PlaceholderImageHandlerSpec.swift */,
 				1431B9051EEB15BE00D767DA /* UIImageViewSpec.swift */,
@@ -410,7 +410,7 @@
 			files = (
 				1431B9081EEB15BE00D767DA /* PlaceholderImageHandler.swift in Sources */,
 				142B565E1EF7740200FCAF4E /* ImageCacheDelegate.swift in Sources */,
-				1488053C1F18048F0025C60F /* LocalFileController.swift in Sources */,
+				1488053C1F18048F0025C60F /* LocalImageController.swift in Sources */,
 				146729C81F1825FF00F63C0A /* DataWriter.swift in Sources */,
 				1431B90A1EEB15BE00D767DA /* UIImageView.swift in Sources */,
 				1431B9061EEB15BE00D767DA /* ImageCache.swift in Sources */,
@@ -433,7 +433,7 @@
 				1431B91B1EEB15CD00D767DA /* UIImageViewSpec.swift in Sources */,
 				1431B9181EEB15CD00D767DA /* MockNSCache.swift in Sources */,
 				1431B9161EEB15CD00D767DA /* MockImageCacheDelegate.swift in Sources */,
-				146729D01F182BFE00F63C0A /* LocalFileControllerSpec.swift in Sources */,
+				146729D01F182BFE00F63C0A /* LocalImageControllerSpec.swift in Sources */,
 				1431B9191EEB15CD00D767DA /* PlaceholderImageHandlerSpec.swift in Sources */,
 				146729C41F181C3900F63C0A /* MockFileManager.swift in Sources */,
 			);
