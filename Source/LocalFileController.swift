@@ -3,10 +3,11 @@ import Foundation
 protocol LocalFileControllerProtocol {
     func deleteDirectory(_ directory: String)
     func getImage(imageName: String, directory: String?) -> UIImage?
-    func saveImage(_ image: UIImage?, fileName: String, directory: String?)
+    func saveJPEG(_ image: UIImage?, compression: CGFloat, fileName: String, directory: String?)
+    func savePNG(_ image: UIImage?, fileName: String, directory: String?)
 }
 
-class LocalFileController: LocalFileControllerProtocol {
+public class LocalFileController: LocalFileControllerProtocol {
 
     // MARK: Internal Variables
 
@@ -18,19 +19,23 @@ class LocalFileController: LocalFileControllerProtocol {
 
     // MARK: Internal Methods
 
-    init(dataWriter: DataWriterProtocol = DataWriter(), fileManager: FileManager = FileManager.default, pathConstructor: PathConstructorProtocol = PathConstructor()) {
+    public convenience init() {
+        self.init(dataWriter: DataWriter(), fileManager: FileManager.default, pathConstructor: PathConstructor())
+    }
+
+    init(dataWriter: DataWriterProtocol, fileManager: FileManager, pathConstructor: PathConstructorProtocol) {
         self.dataWriter = dataWriter
         self.fileManager = fileManager
         self.pathConstructor = pathConstructor
     }
 
-    func deleteDirectory(_ directory: String) {
+    public func deleteDirectory(_ directory: String) {
         if let directoryPath = pathConstructor.directoryPathString(directory) {
             try? fileManager.removeItem(atPath: directoryPath)
         }
     }
 
-    func getImage(imageName: String, directory: String?) -> UIImage? {
+    public func getImage(imageName: String, directory: String?) -> UIImage? {
         var image: UIImage? = nil
 
         if let imagePath = pathConstructor.filePathString(imageName, directory: directory) {
@@ -40,10 +45,21 @@ class LocalFileController: LocalFileControllerProtocol {
         return image
     }
 
-    func saveImage(_ image: UIImage?, fileName: String, directory: String?) {
-        if let image = image {
-            let data = UIImagePNGRepresentation(image)
-            dataWriter.writeData(data, fileName: fileName, directory: directory)
+    public func saveJPEG(_ image: UIImage?, compression: CGFloat, fileName: String, directory: String?) {
+        if let image = image,
+            let data = UIImageJPEGRepresentation(image, compression) {
+            saveImageData(data, fileName: fileName, directory: directory)
         }
+    }
+
+    public func savePNG(_ image: UIImage?, fileName: String, directory: String?) {
+        if let image = image,
+            let data = UIImagePNGRepresentation(image) {
+            saveImageData(data, fileName: fileName, directory: directory)
+        }
+    }
+
+    func saveImageData(_ data: Data, fileName: String, directory: String?) {
+        dataWriter.writeData(data, fileName: fileName, directory: directory)
     }
 }

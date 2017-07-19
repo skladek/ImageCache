@@ -63,17 +63,16 @@ public class ImageCache {
     ///   - url: The image's remote path
     ///   - directory: The directory to save the image in if useLocalStorage is set to true.
     public func cacheImage(_ image: UIImage?, forURL url: URL, directory: String? = nil) {
-        guard let image = image else {
+        guard let image = image,
+            let fileName = imageNameFromURL(url) as? String else {
             return
         }
 
-        if useLocalStorage == true,
-            let imageName = imageNameFromURL(url) as? String {
-            localFileController.saveImage(image, fileName: imageName, directory: directory)
+        if useLocalStorage == true {
+            localFileController.savePNG(image, fileName: fileName, directory: directory)
         }
 
-        let imageName = imageNameFromURL(url)
-        cache.setObject(image, forKey: imageName)
+        cache.setObject(image, forKey: fileName as AnyObject)
     }
 
     /// Deletes the folder at the provided path.
@@ -103,6 +102,7 @@ public class ImageCache {
         }
 
         if useLocalStorage == true,
+            skipCache == false,
             let fileName = imageNameFromURL(url) as? String,
             let image = localFileController.getImage(imageName: fileName, directory: directory) {
             completion(image, .localStorage, nil)

@@ -5,7 +5,8 @@ import Foundation
 class MockLocalFileController: LocalFileControllerProtocol {
     var deleteDirectoryCalled = false
     var getImageCalled = false
-    var saveImageCalled = false
+    var savePNGCalled = false
+    var saveJPEGCalled = false
 
     func deleteDirectory(_ directory: String) {
         deleteDirectoryCalled = true
@@ -17,7 +18,11 @@ class MockLocalFileController: LocalFileControllerProtocol {
         return UIImage()
     }
 
-    func saveImage(_ image: UIImage?, fileName: String, directory: String?) {
-        saveImageCalled = true
+    func saveJPEG(_ image: UIImage?, compression: CGFloat, fileName: String, directory: String?) {
+        saveJPEGCalled = true
+    }
+
+    func savePNG(_ image: UIImage?, fileName: String, directory: String?) {
+        savePNGCalled = true
     }
 }

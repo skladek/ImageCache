@@ -52,13 +52,13 @@ class ImageCacheSpec: QuickSpec {
                 it("Should not call saveImage on the localFileController if useLocalStorage is set to false") {
                     unitUnderTest.useLocalStorage = false
                     unitUnderTest.cacheImage(image, forURL: url)
-                    expect(mockLocalFileController.saveImageCalled).to(beFalse())
+                    expect(mockLocalFileController.savePNGCalled).to(beFalse())
                 }
 
                 it("Should call saveImage on the localFileController if useLocalStorage is set to true") {
                     unitUnderTest.useLocalStorage = true
                     unitUnderTest.cacheImage(image, forURL: url)
-                    expect(mockLocalFileController.saveImageCalled).to(beTrue())
+                    expect(mockLocalFileController.savePNGCalled).to(beTrue())
                 }
             }
 
@@ -125,16 +125,23 @@ class ImageCacheSpec: QuickSpec {
                     }
                 }
 
-                it("Should call getImage on the localFileController if useLocalStorage is set to true") {
+                it("Should not call getImage on the localFileController if skipCache is set to true") {
                     unitUnderTest.useLocalStorage = true
                     let _ = unitUnderTest.getImage(url: url, directory: nil, skipCache: true, completion: { (_, _, _) in
+                        expect(mockLocalFileController.getImageCalled).to(beFalse())
+                    })
+                }
+
+                it("Should call getImage on the localFileController if useLocalStorage is set to true") {
+                    unitUnderTest.useLocalStorage = true
+                    let _ = unitUnderTest.getImage(url: url, directory: nil, skipCache: false, completion: { (_, _, _) in
                         expect(mockLocalFileController.getImageCalled).to(beTrue())
                     })
                 }
 
                 it("Should set the source to local if an image is returned from the localFileController") {
                     unitUnderTest.useLocalStorage = true
-                    let _ = unitUnderTest.getImage(url: url, directory: nil, skipCache: true, completion: { (_, source, _) in
+                    let _ = unitUnderTest.getImage(url: url, directory: nil, skipCache: false, completion: { (_, source, _) in
                         expect(source).to(equal(.localStorage))
                     })
                 }
