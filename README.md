@@ -60,6 +60,22 @@ A single object can be removed from the cache using the `removeObjectAtURL(_:)` 
 
 Images that are not found in the cache will request an image from the delegate object. This allows the image cache to be connected to your existing networking layer. The `loadImageAtURL(_:completion:) -> URLSessionDataTask?` method will be called on the delegate when the image was not found in the cache and should be loaded from an external source.
 
+## LocalImageController
+
+A LocalImageController class is provided to allow managing saving, retrieving, and deleting images from disk. This can be used independently of the ImageCache.
+
+### Save an image
+
+To save an image, use the `saveJPEG(_:compression:fileName:directory:)` or `savePNG(_:fileName:directory:)` method. The image will be converted to data and saved to disk in the format corresponding to the method. The file name is what the image will be named on disk. The directory is an optional parameter. Pass a path in here to specify folders deeper than the documents directory. If the folder does not exist, it will be created.
+
+### Retrieve an image
+
+Images can be retrieved with the `getImage(imageName:directory:)` method. Pass in the name of the file and the path from the documents directory. If no path parameter is passed in, the documents directory will be searched.
+
+### Delete a directory
+
+Deletes the specified folder and all of its contents.
+
 ## UIImageView Extension
 
 SKImageCache provides an extension to UIImageView. This allows an image to be set on the image view using the image's URL. Use the `setImageFromURL(_:placeholderImageName:) -> URLSessionDataTask?` method. The URL is the remote URL of the image to fetch. The placeholderImageName is the name of the image in the bundle to be displayed until the remote or cached image is returned. If the image is returned from the cache, the image will immediately be swapped. If the image is returned from a remote source, the images will be crossfaded.
