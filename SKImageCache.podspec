@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'SKImageCache'
-  spec.version = '1.2.0'
+  spec.version = '1.3.0'
   spec.license = 'MIT'
   spec.summary = 'A simple image cache.'
   spec.homepage = 'https://github.com/skladek/SKImageCache'
