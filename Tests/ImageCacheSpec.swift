@@ -8,17 +8,17 @@ class ImageCacheSpec: QuickSpec {
     override func spec() {
         describe("ImageCache") {
             var delegate: MockImageCacheDelegate!
-            var mockLocalFileController: MockLocalFileController!
+            var mockLocalImageController: MockLocalImageController!
             var mockNSCache: MockNSCache!
             var unitUnderTest: ImageCache!
             var url: URL!
 
             beforeEach {
                 delegate = MockImageCacheDelegate()
-                mockLocalFileController = MockLocalFileController()
+                mockLocalImageController = MockLocalImageController()
                 mockNSCache = MockNSCache()
                 url = URL(string: "http://example.url/image1.png")!
-                unitUnderTest = ImageCache(cache: mockNSCache, localFileController: mockLocalFileController)
+                unitUnderTest = ImageCache(cache: mockNSCache, localFileController: mockLocalImageController)
                 unitUnderTest.delegate = delegate
             }
 
@@ -52,20 +52,20 @@ class ImageCacheSpec: QuickSpec {
                 it("Should not call saveImage on the localFileController if useLocalStorage is set to false") {
                     unitUnderTest.useLocalStorage = false
                     unitUnderTest.cacheImage(image, forURL: url)
-                    expect(mockLocalFileController.savePNGCalled).to(beFalse())
+                    expect(mockLocalImageController.savePNGCalled).to(beFalse())
                 }
 
                 it("Should call saveImage on the localFileController if useLocalStorage is set to true") {
                     unitUnderTest.useLocalStorage = true
                     unitUnderTest.cacheImage(image, forURL: url)
-                    expect(mockLocalFileController.savePNGCalled).to(beTrue())
+                    expect(mockLocalImageController.savePNGCalled).to(beTrue())
                 }
             }
 
             context("deleteDirectory(_:)") {
                 it("Should call delete directory on the local file controller") {
                     unitUnderTest.deleteDirectory("")
-                    expect(mockLocalFileController.deleteDirectoryCalled).to(beTrue())
+                    expect(mockLocalImageController.deleteDirectoryCalled).to(beTrue())
                 }
             }
 
@@ -128,14 +128,14 @@ class ImageCacheSpec: QuickSpec {
                 it("Should not call getImage on the localFileController if skipCache is set to true") {
                     unitUnderTest.useLocalStorage = true
                     let _ = unitUnderTest.getImage(url: url, directory: nil, skipCache: true, completion: { (_, _, _) in
-                        expect(mockLocalFileController.getImageCalled).to(beFalse())
+                        expect(mockLocalImageController.getImageCalled).to(beFalse())
                     })
                 }
 
                 it("Should call getImage on the localFileController if useLocalStorage is set to true") {
                     unitUnderTest.useLocalStorage = true
                     let _ = unitUnderTest.getImage(url: url, directory: nil, skipCache: false, completion: { (_, _, _) in
-                        expect(mockLocalFileController.getImageCalled).to(beTrue())
+                        expect(mockLocalImageController.getImageCalled).to(beTrue())
                     })
                 }
 

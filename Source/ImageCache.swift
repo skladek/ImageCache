@@ -39,19 +39,18 @@ public class ImageCache {
     // MARK: Internal Variables
 
     let cache: NSCache<AnyObject, UIImage>
-
-    let localFileController: LocalFileControllerProtocol
+    let localImageController: LocalImageControllerProtocol
 
     // MARK: Init Methods
 
     init() {
         self.cache = NSCache<AnyObject, UIImage>()
-        self.localFileController = LocalFileController()
+        self.localImageController = LocalImageController()
     }
 
-    init(cache: NSCache<AnyObject, UIImage>, localFileController: LocalFileControllerProtocol) {
+    init(cache: NSCache<AnyObject, UIImage>, localFileController: LocalImageControllerProtocol) {
         self.cache = cache
-        self.localFileController = localFileController
+        self.localImageController = localFileController
     }
 
     // MARK: Public Methods
@@ -69,7 +68,7 @@ public class ImageCache {
         }
 
         if useLocalStorage == true {
-            localFileController.savePNG(image, fileName: fileName, directory: directory)
+            localImageController.savePNG(image, fileName: fileName, directory: directory)
         }
 
         cache.setObject(image, forKey: fileName as AnyObject)
@@ -79,7 +78,7 @@ public class ImageCache {
     ///
     /// - Parameter directory: The directory to be deleted.
     public func deleteDirectory(_ directory: String) {
-        localFileController.deleteDirectory(directory)
+        localImageController.deleteDirectory(directory)
     }
 
     /// Removes all objects from the cache.
@@ -104,7 +103,7 @@ public class ImageCache {
         if useLocalStorage == true,
             skipCache == false,
             let fileName = imageNameFromURL(url) as? String,
-            let image = localFileController.getImage(imageName: fileName, directory: directory) {
+            let image = localImageController.getImage(imageName: fileName, directory: directory) {
             completion(image, .localStorage, nil)
             return nil
         }

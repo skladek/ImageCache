@@ -4,20 +4,20 @@ import Quick
 
 @testable import SKImageCache
 
-class LocalFileControllerSpec: QuickSpec {
+class LocalImageControllerSpec: QuickSpec {
     override func spec() {
-        describe("LocalFileController") {
+        describe("LocalImageController") {
             var dataWriter: MockDataWriter!
             var fileManager: MockFileManager!
             var image: UIImage!
             var pathConstructor: MockPathConstructor!
-            var unitUnderTest: LocalFileController!
+            var unitUnderTest: LocalImageController!
 
             beforeEach {
                 dataWriter = MockDataWriter()
                 fileManager = MockFileManager()
                 pathConstructor = MockPathConstructor()
-                unitUnderTest = LocalFileController(dataWriter: dataWriter, fileManager: fileManager, pathConstructor: pathConstructor)
+                unitUnderTest = LocalImageController(dataWriter: dataWriter, fileManager: fileManager, pathConstructor: pathConstructor)
 
                 let bundle = Bundle(for: type(of: self))
                 image = UIImage(named: "testimage", in: bundle, compatibleWith: nil)
