@@ -4,6 +4,10 @@ import UIKit
 protocol Requesting {
     typealias RequestCompletion = (Data?, URLResponse?, Error?) -> Void
 
+    var token: String? { get set }
+    var urlConstructor: URLConstructable { get }
+    var useLocalFiles: Bool { get set }
+
     func imageCompletion(data: Data?, response: URLResponse?, error: Error?, completion: @escaping WebServiceController.ImageCompletion)
     func jsonCompletion(data: Data?, response: URLResponse?, error: Error?, completion: @escaping WebServiceController.JSONCompletion)
     func performRequest(_ request: URLRequest, httpMethod: WebServiceController.HTTPMethod, json: Any?, completion: @escaping RequestCompletion) -> URLSessionDataTask?
@@ -12,15 +16,31 @@ protocol Requesting {
 
 class RequestController: Requesting {
 
-    let jsonHandler: JSONHandling
-    let session: URLSession
-    let urlConstructor: URLConstructable
+    // MARK: Static Variables
 
-    init(jsonHandler: JSONHandling, session: URLSession, urlConstructor: URLConstructable) {
+    static let authorizationHeader = "Authorization"
+
+    // MARK: Internal Properties
+
+    let jsonHandler: JSONHandling
+    let localFileController: LocalFileRequestControllerProtocol
+    let session: URLSession
+    var token: String?
+    let urlConstructor: URLConstructable
+    var useLocalFiles: Bool = false
+
+    // MARK: Init Methods
+
+    init(jsonHandler: JSONHandling, localFileController: LocalFileRequestControllerProtocol = LocalFileRequestController(), session: URLSession, urlConstructor: URLConstructable) {
         self.jsonHandler = jsonHandler
+        self.localFileController = localFileController
         self.session = session
         self.urlConstructor = urlConstructor
+
+        loadToken()
     }
+
+    // MARK: Instance Methods
 
     func dataTask(request: URLRequest, completion: @escaping RequestCompletion) -> URLSessionDataTask {
         let dataTask = session.dataTask(with: request, completionHandler: completion)
@@ -58,7 +78,19 @@ class RequestController: Requesting {
         }
     }
 
+    func loadToken(keychain: KeychainProtocol = Keychain()) {
+        if let authTokenData = keychain.load(key: Keychain.authTokenKeychainKey) {
+            self.token = String(data: authTokenData, encoding: .utf8)
+        }
+    }
+
     func performRequest(_ request: URLRequest, httpMethod: WebServiceController.HTTPMethod, json: Any?, completion: @escaping RequestCompletion) -> URLSessionDataTask? {
+
+        if useLocalFiles == true {
+            localFileController.getFileWithRequest(request, completion: completion)
+            return nil
+        }
+
         var data: Data? = nil
         var sessionTask: URLSessionDataTask? = nil
 
@@ -92,12 +124,24 @@ class RequestController: Requesting {
 
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
+        request = setAuthorizationHeaderOnRequest(request)
         request = setHeadersOnRequest(request, headers: requestConfiguration?.additionalHTTPHeaders)
 
         return performRequest(request, httpMethod: httpMethod, json: json, completion: completion)
     }
 
-    func setHeadersOnRequest(_ request: URLRequest, headers: [AnyHashable : Any]?) -> URLRequest {
+    func setAuthorizationHeaderOnRequest(_ request: URLRequest) -> URLRequest {
+        guard let token = token else {
+            return request
+        }
+
+        var mutableRequest = request
+        mutableRequest.setValue(token, forHTTPHeaderField: RequestController.authorizationHeader)
+
+        return mutableRequest
+    }
+
+    func setHeadersOnRequest(_ request: URLRequest, headers: [AnyHashable: Any]?) -> URLRequest {
         guard let headers = headers else {
             return request
         }
