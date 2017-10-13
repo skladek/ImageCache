@@ -10,6 +10,7 @@ class HomeViewController: UIViewController {
 
     var dataSource: TableViewDataSource<Image>? = nil
 
+    @objc
     func deleteLocalStorageTapped() {
         ImageCache.shared.deleteDirectory("12345/")
     }

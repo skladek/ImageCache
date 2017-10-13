@@ -1,6 +1,7 @@
 import UIKit
 
 class WebServiceError: NSError {
+
     // MARK: Class Types
 
     enum Code: Int {
@@ -23,7 +24,7 @@ class WebServiceError: NSError {
             localizedDescription = "An unknown error occurred."
         }
 
-        var userInfo: [AnyHashable : Any]? = nil
+        var userInfo: [String: Any]? = nil
         if let message = localizedDescription {
             userInfo = [NSLocalizedDescriptionKey: message]
         }

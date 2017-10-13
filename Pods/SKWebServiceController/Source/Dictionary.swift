@@ -1,8 +1,11 @@
 import Foundation
 
 extension Dictionary {
-    func toStringDictionary() -> [String : String] {
-        var stringDictionary: [String : String] = [:]
+
+    // MARK: Instance Methods
+
+    func toStringDictionary() -> [String: String] {
+        var stringDictionary: [String: String] = [:]
 
         for key in self.keys {
             if let value = self[key] {

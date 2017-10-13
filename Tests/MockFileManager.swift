@@ -7,7 +7,7 @@ class MockFileManager: FileManager {
 
     var fileExists = false
 
-    override func createDirectory(atPath path: String, withIntermediateDirectories createIntermediates: Bool, attributes: [String : Any]? = nil) throws {
+    override func createDirectory(atPath path: String, withIntermediateDirectories createIntermediates: Bool, attributes: [FileAttributeKey : Any]? = nil) throws {
         createDirectoryCalled = true
     }
 

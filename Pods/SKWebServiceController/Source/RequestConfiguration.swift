@@ -2,8 +2,11 @@ import Foundation
 
 /// Provides values to configure a single request.
 public class RequestConfiguration {
-    let additionalHTTPHeaders: [AnyHashable : Any]?
-    let queryParameters: [AnyHashable : Any]
+
+    // MARK: Internal Properties
+
+    let additionalHTTPHeaders: [AnyHashable: Any]?
+    let queryParameters: [AnyHashable: Any]
 
     /// Initializes a request configuration object
     ///
@@ -13,7 +16,7 @@ public class RequestConfiguration {
     ///        and Boolean. Other types will attempt to be converted, but the result is not guaranteed.
     ///   - queryParameters: Query parameters to append to the endpoint. Supported value types are String, Number,
     ///        and Boolean. Other types will attempt to be converted, but the result is not guaranteed.
-    public init(additionalHTTPHeaders: [AnyHashable : Any]? = nil, queryParameters: [AnyHashable : Any] = [:]) {
+    public init(additionalHTTPHeaders: [AnyHashable: Any]? = nil, queryParameters: [AnyHashable: Any] = [:]) {
         self.additionalHTTPHeaders = additionalHTTPHeaders
         self.queryParameters = queryParameters
     }

@@ -6,17 +6,17 @@ inhibit_all_warnings!
 target 'SKImageCache' do
 	project 'SKImageCache.xcodeproj'
 	workspace 'SKImageCache.xcworkspace'
-	pod 'SwiftLint', '= 0.19.0'
+	pod 'SwiftLint', '= 0.23.1'
 end
 
 target 'SKImageCacheTests' do
 	project 'SKImageCache.xcodeproj'
-	pod 'Nimble', '= 7.0.0'
-	pod 'Quick', '= 1.1.0'
+	pod 'Nimble', '= 7.0.2'
+	pod 'Quick', '= 1.2.0'
 end
 
 target 'SampleProject' do
 	project 'SampleProject/SampleProject.xcodeproj'
-	pod 'SKTableViewDataSource', '= 1.0.1'
-	pod 'SKWebServiceController', '= 0.0.6'
+	pod 'SKTableViewDataSource', '= 2.0.0'
+	pod 'SKWebServiceController', '= 1.0.0'
 end
