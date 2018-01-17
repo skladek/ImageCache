@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
 
+        ImageCache.shared.useURLPathing = true
+        ImageCache.shared.useLocalStorage = true
+
         #if arch(i386) || arch(x86_64)
             if let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.path {
                 print("Documents Directory: \(documentsPath)")

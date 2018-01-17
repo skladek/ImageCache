@@ -17,7 +17,7 @@ class ImageCacheSpec: QuickSpec {
                 delegate = MockImageCacheDelegate()
                 mockLocalImageController = MockLocalImageController()
                 mockNSCache = MockNSCache()
-                url = URL(string: "http://example.url/image1.png")!
+                url = URL(string: "http://example.com/folder1/folder2/image1.png")!
                 unitUnderTest = ImageCache(cache: mockNSCache, localFileController: mockLocalImageController)
                 unitUnderTest.delegate = delegate
             }
@@ -144,6 +144,22 @@ class ImageCacheSpec: QuickSpec {
                     let _ = unitUnderTest.getImage(url: url, directory: nil, skipCache: false, completion: { (_, source, _) in
                         expect(source).to(equal(.localStorage))
                     })
+                }
+            }
+
+            context("imageNameFromURL(_:)") {
+                it("Should return the last path component if useURLPathing is false") {
+                    unitUnderTest.useURLPathing = false
+                    let imageName = unitUnderTest.imageNameFromURL(url)
+
+                    expect((imageName as! String)).to(equal("image1.png"))
+                }
+
+                it("Should return the full image path if useURLPathing is false") {
+                    unitUnderTest.useURLPathing = true
+                    let imageName = unitUnderTest.imageNameFromURL(url)
+
+                    expect((imageName as! String)).to(equal("/folder1/folder2/image1.png"))
                 }
             }
 
