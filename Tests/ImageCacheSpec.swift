@@ -150,14 +150,16 @@ class ImageCacheSpec: QuickSpec {
             context("imageNameFromURL(_:)") {
                 it("Should return the last path component if useURLPathing is false") {
                     unitUnderTest.useURLPathing = false
-                    let imageName = unitUnderTest.imageNameFromURL(url)
+                    let imageInfo = unitUnderTest.imageInfoFromURL(url)
+                    let imageName = imageInfo.imageKey
 
                     expect((imageName as! String)).to(equal("image1.png"))
                 }
 
                 it("Should return the full image path if useURLPathing is false") {
                     unitUnderTest.useURLPathing = true
-                    let imageName = unitUnderTest.imageNameFromURL(url)
+                    let imageInfo = unitUnderTest.imageInfoFromURL(url)
+                    let imageName = imageInfo.imageKey
 
                     expect((imageName as! String)).to(equal("/folder1/folder2/image1.png"))
                 }

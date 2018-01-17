@@ -57,8 +57,6 @@ public extension UIImageView {
             return
         }
 
-        print(source)
-
         if source == .remote {
             imageHandler.dissolveToImage(image, onView: self)
         } else {

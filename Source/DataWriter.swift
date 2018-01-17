@@ -12,13 +12,19 @@ class DataWriter: DataWriterProtocol {
     }
 
     func writeData(_ data: Data?, fileName: String, directory: String?) {
+        var mutableDirectory = directory
+
+        while mutableDirectory?.range(of: "//") != nil {
+            mutableDirectory = mutableDirectory?.replacingOccurrences(of: "//", with: "/")
+        }
+
         guard let data = data,
-            let directoryPath = pathConstructor.directoryPathString(directory) else {
+            let directoryPath = pathConstructor.directoryPathString(mutableDirectory) else {
                 return
         }
 
         pathConstructor.createDirectoryIfNecessary(path: directoryPath)
-        if let filePath = pathConstructor.filePathURL(fileName, directory: directory) {
+        if let filePath = pathConstructor.filePathURL(fileName, directory: mutableDirectory) {
             try? data.write(to: filePath)
         }
     }

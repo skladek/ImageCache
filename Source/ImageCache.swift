@@ -74,13 +74,14 @@ public class ImageCache {
         let imageInfo = imageInfoFromURL(url)
 
         guard let image = image,
-            let imageKey = imageInfo.imageKey as? String else {
+            let imageKey = imageInfo.imageKey as? String,
+            let imageName = imageInfo.imageName as? String else {
             return
         }
 
         if useLocalStorage == true {
             let appendedDirectory = concatImageInfoAndDirectory(imageInfo: imageInfo, directory: directory)
-            localImageController.savePNG(image, fileName: imageKey, directory: appendedDirectory)
+            localImageController.savePNG(image, fileName: imageName, directory: appendedDirectory)
         }
 
         cache.setObject(image, forKey: imageKey as AnyObject)
