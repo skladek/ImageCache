@@ -11,20 +11,26 @@ class DataWriter: DataWriterProtocol {
         self.pathConstructor = pathConstructor
     }
 
-    func writeData(_ data: Data?, fileName: String, directory: String?) {
+    func trimDirectory(_ directory: String?) -> String? {
         var mutableDirectory = directory
 
         while mutableDirectory?.range(of: "//") != nil {
             mutableDirectory = mutableDirectory?.replacingOccurrences(of: "//", with: "/")
         }
 
+        return mutableDirectory
+    }
+
+    func writeData(_ data: Data?, fileName: String, directory: String?) {
+        let trimmedDirectory = trimDirectory(directory)
+
         guard let data = data,
-            let directoryPath = pathConstructor.directoryPathString(mutableDirectory) else {
+            let directoryPath = pathConstructor.directoryPathString(trimmedDirectory) else {
                 return
         }
 
         pathConstructor.createDirectoryIfNecessary(path: directoryPath)
-        if let filePath = pathConstructor.filePathURL(fileName, directory: mutableDirectory) {
+        if let filePath = pathConstructor.filePathURL(fileName, directory: trimmedDirectory) {
             try? data.write(to: filePath)
         }
     }
