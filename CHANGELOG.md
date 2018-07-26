@@ -2,6 +2,7 @@
 All notable changes to this project will be documented in this file.
 
 #### 2.x Releases
+- `2.2.0` Releases - [2.2.0](#220)
 - `2.1.0` Releases - [2.1.0](#210)
 - `2.0.0` Releases - [2.0.0](#200)
 
@@ -10,6 +11,11 @@ All notable changes to this project will be documented in this file.
 - `1.2.0` Releases - [1.2.0](#120)
 - `1.1.0` Releases - [1.1.0](#110)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101)
+
+## [2.2.0](https://github.com/skladek/SKImageCache/releases/tag/2.2.0)
+
+#### Added
+- The ability to define a global default image directory to save images to.
 
 ## [2.1.0](https://github.com/skladek/SKImageCache/releases/tag/2.1.0)
 
