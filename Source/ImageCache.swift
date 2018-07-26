@@ -29,6 +29,14 @@ public class ImageCache {
 
     // MARK: Public Variables
 
+    public var defaultImageDirectory: String {
+        get {
+            return localImageController.defaultImageDirectory
+        } set {
+            localImageController.defaultImageDirectory = newValue
+        }
+    }
+
     /// The object responding to delegate events.
     public weak var delegate: ImageCacheDelegate?
 
@@ -48,7 +56,7 @@ public class ImageCache {
     // MARK: Internal Variables
 
     let cache: NSCache<AnyObject, UIImage>
-    let localImageController: LocalImageControllerProtocol
+    var localImageController: LocalImageControllerProtocol
 
     // MARK: Init Methods
 
