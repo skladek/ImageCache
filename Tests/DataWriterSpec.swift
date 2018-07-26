@@ -39,17 +39,17 @@ class DataWriterSpec: QuickSpec {
 
             context("writeData(_:fileName:directory:)") {
                 it("Should not call createDirectoryIfNeeded if data is nil") {
-                    unitUnderTest.writeData(nil, fileName: "Test", directory: nil)
+                    unitUnderTest.writeData(nil, fileName: "Test", directory: "")
                     expect(pathConstructor.createDirectoryCalled).to(beFalse())
                 }
 
                 it("Should call createDirectoryIfNeeded if data is passed in") {
-                    unitUnderTest.writeData(Data(), fileName: "Test", directory: nil)
+                    unitUnderTest.writeData(Data(), fileName: "Test", directory: "")
                     expect(pathConstructor.createDirectoryCalled).to(beTrue())
                 }
 
                 it("Should call filePathURL on the path constructor if valid data is passed in") {
-                    unitUnderTest.writeData(Data(), fileName: "test", directory: nil)
+                    unitUnderTest.writeData(Data(), fileName: "test", directory: "")
                     expect(pathConstructor.filePathURLCalled).to(beTrue())
                 }
             }

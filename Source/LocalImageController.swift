@@ -1,6 +1,8 @@
 import Foundation
 
 protocol LocalImageControllerProtocol {
+    var defaultImageDirectory: String { get set }
+
     func deleteDirectory(_ directory: String)
     func getImage(imageName: String, directory: String?) -> UIImage?
     func saveJPEG(_ image: UIImage?, compression: CGFloat, fileName: String, directory: String?)
@@ -13,6 +15,7 @@ public class LocalImageController: LocalImageControllerProtocol {
     // MARK: Internal Variables
 
     let dataWriter: DataWriterProtocol
+    var defaultImageDirectory = ""
     let fileManager: FileManager
     let pathConstructor: PathConstructorProtocol
 
@@ -87,6 +90,8 @@ public class LocalImageController: LocalImageControllerProtocol {
     // MARK: Private Methods
 
     private func saveImageData(_ data: Data, fileName: String, directory: String?) {
+        let directory = directory ?? defaultImageDirectory
+
         dataWriter.writeData(data, fileName: fileName, directory: directory)
     }
 }

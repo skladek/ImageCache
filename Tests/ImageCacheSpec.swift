@@ -29,6 +29,18 @@ class ImageCacheSpec: QuickSpec {
                 }
             }
 
+            context("defaultImageDirectory: String") {
+                it("Should return the value from the local image controller") {
+                    mockLocalImageController.defaultImageDirectory = "testImageDirectory"
+                    expect(unitUnderTest.defaultImageDirectory).to(equal("testImageDirectory"))
+                }
+
+                it("Should set the value on the local image controller") {
+                    unitUnderTest.defaultImageDirectory = "testImageDirectory"
+                    expect(mockLocalImageController.defaultImageDirectory).to(equal("testImageDirectory"))
+                }
+            }
+
             context("cacheImage(_:forURL:)") {
                 var image: UIImage!
 

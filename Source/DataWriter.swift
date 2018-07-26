@@ -1,7 +1,7 @@
 import Foundation
 
 protocol DataWriterProtocol {
-    func writeData(_ data: Data?, fileName: String, directory: String?)
+    func writeData(_ data: Data?, fileName: String, directory: String)
 }
 
 class DataWriter: DataWriterProtocol {
@@ -21,7 +21,7 @@ class DataWriter: DataWriterProtocol {
         return mutableDirectory
     }
 
-    func writeData(_ data: Data?, fileName: String, directory: String?) {
+    func writeData(_ data: Data?, fileName: String, directory: String) {
         let trimmedDirectory = trimDirectory(directory)
 
         guard let data = data,
