@@ -5,7 +5,7 @@ import Foundation
 class MockDataWriter: DataWriterProtocol {
     var writeDataCalled = false
 
-    func writeData(_ data: Data?, fileName: String, directory: String?) {
+    func writeData(_ data: Data?, fileName: String, directory: String) {
         writeDataCalled = true
     }
 }
