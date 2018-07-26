@@ -29,6 +29,7 @@ public class ImageCache {
 
     // MARK: Public Variables
 
+    /// The default directory to save the images in. The path is relative to the documents directory.
     public var defaultImageDirectory: String {
         get {
             return localImageController.defaultImageDirectory
@@ -151,7 +152,7 @@ public class ImageCache {
     // MARK: Instance Methods
 
     func concatImageInfoAndDirectory(imageInfo: ImageInfo, directory: String?) -> String {
-        return "\(directory ?? "")\(imageInfo.path as? String ?? "")"
+        return "\(directory ?? defaultImageDirectory)\(imageInfo.path as? String ?? "")"
     }
 
     func imageInfoFromURL(_ url: URL) -> ImageInfo {
